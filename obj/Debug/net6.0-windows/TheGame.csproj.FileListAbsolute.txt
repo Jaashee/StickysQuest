@@ -79,3 +79,30 @@ C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-wind
 C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.pdb
 C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.genruntimeconfig.cache
 C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\ref\TheGame.dll
+C:\Users\r12d1\Source\Repos\TheGame\bin\Debug\net6.0-windows\TheGame.exe
+C:\Users\r12d1\Source\Repos\TheGame\bin\Debug\net6.0-windows\TheGame.deps.json
+C:\Users\r12d1\Source\Repos\TheGame\bin\Debug\net6.0-windows\TheGame.runtimeconfig.json
+C:\Users\r12d1\Source\Repos\TheGame\bin\Debug\net6.0-windows\TheGame.dll
+C:\Users\r12d1\Source\Repos\TheGame\bin\Debug\net6.0-windows\TheGame.pdb
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.csproj.AssemblyReference.cache
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\OptionsPage.g.cs
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TitleScreen.g.cs
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\WinterTower.g.cs
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame_MarkupCompile.cache
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame_MarkupCompile.lref
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\OptionsPage.baml
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TitleScreen.baml
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\WinterTower.baml
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.g.resources
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.AssemblyInfoInputs.cache
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.AssemblyInfo.cs
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.csproj.CoreCompileInputs.cache
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.dll
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\refint\TheGame.dll
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.pdb
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.genruntimeconfig.cache
+C:\Users\r12d1\Source\Repos\TheGame\obj\Debug\net6.0-windows\ref\TheGame.dll
