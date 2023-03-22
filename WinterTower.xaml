@@ -17,7 +17,7 @@
             <Rectangle Name="WinterEnemy3" Height="250" Width="250" Fill="Yellow" Canvas.Left="528" Canvas.Top="129" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Rectangle Name="WinterEnemy4" Height="250" Width="250" Fill="Yellow" Canvas.Left="528" Canvas.Top="129" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Rectangle Name="WinterEnemy5" Height="250" Width="250" Fill="Yellow" Canvas.Left="528" Canvas.Top="129" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Button Name="btnAttack" Content="Attack" Canvas.Left="49" Canvas.Top="138" HorizontalAlignment="Left" VerticalAlignment="Center" Width="139" Click="btnAttack_Click"/>
+            <Button Name="btnAttack" Content="ATTACK" Canvas.Left="49" Canvas.Top="138" HorizontalAlignment="Left" VerticalAlignment="Center" Width="139" Click="btnAttack_Click"/>
             <Button Name="btnBack" Content="Back" Canvas.Left="653" Canvas.Top="56" Height="36" Width="121" Click="btnBack_Click"/>
             <Label Name ="lblScore" Content="Score =" VerticalAlignment="Center" Width="257" FontSize="48" FontWeight="Bold" FontFamily="Algerian" HorizontalAlignment="Left" Canvas.Left="16" Canvas.Top="21"/>
 
