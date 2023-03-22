@@ -52,3 +52,30 @@ C:\Users\drago\OneDrive\Documents\DurhamCollage\Winter2023\OOP\FinalProject\TheG
 C:\Users\drago\OneDrive\Documents\DurhamCollage\Winter2023\OOP\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.pdb
 C:\Users\drago\OneDrive\Documents\DurhamCollage\Winter2023\OOP\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.genruntimeconfig.cache
 C:\Users\drago\OneDrive\Documents\DurhamCollage\Winter2023\OOP\FinalProject\TheGame\obj\Debug\net6.0-windows\ref\TheGame.dll
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\bin\Debug\net6.0-windows\TheGame.exe
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\bin\Debug\net6.0-windows\TheGame.deps.json
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\bin\Debug\net6.0-windows\TheGame.runtimeconfig.json
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\bin\Debug\net6.0-windows\TheGame.dll
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\bin\Debug\net6.0-windows\TheGame.pdb
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.csproj.AssemblyReference.cache
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\OptionsPage.g.cs
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TitleScreen.g.cs
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\WinterTower.g.cs
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\App.g.cs
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame_MarkupCompile.cache
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame_MarkupCompile.lref
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\OptionsPage.baml
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TitleScreen.baml
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\WinterTower.baml
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.g.resources
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.AssemblyInfoInputs.cache
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.AssemblyInfo.cs
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.csproj.CoreCompileInputs.cache
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.dll
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\refint\TheGame.dll
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.pdb
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\TheGame.genruntimeconfig.cache
+C:\Durham College\Winter2023\OOP-4200\FinalProject\TheGame\obj\Debug\net6.0-windows\ref\TheGame.dll

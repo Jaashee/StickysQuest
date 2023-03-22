@@ -23,7 +23,7 @@ namespace TheGame
     {
         int counter = 0;
         List<Enemy> WinterEnemyList = new List<Enemy>();
-        List<Enemy> WinterEnemyImageList = new List<Enemy>();
+        List <Shape> WinterEnemyImageList = new List<Shape>();
         
         public WinterTower()
         {
@@ -37,13 +37,32 @@ namespace TheGame
 
             ImageBrush WitnerEnemy1Image = new ImageBrush();
             WitnerEnemy1Image.ImageSource = new BitmapImage(new Uri("Images/WinterEnemy1.png", UriKind.Relative));
+
+            ImageBrush WitnerEnemy2Image = new ImageBrush();
+            WitnerEnemy2Image.ImageSource = new BitmapImage(new Uri("Images/WinterTowerEnemy2.jpg", UriKind.Relative));
+
+
+            ImageBrush WitnerEnemy3Image = new ImageBrush();
+            WitnerEnemy3Image.ImageSource = new BitmapImage(new Uri("Images/WinterTowerEnemy3.jpg", UriKind.Relative));
+
+
+
             WinterEnemy1.Fill = WitnerEnemy1Image;
+            WinterEnemy1.Visibility = Visibility.Hidden;
+            WinterEnemy2.Fill = WitnerEnemy2Image;
+            WinterEnemy2.Visibility = Visibility.Hidden;
+            WinterEnemy3.Fill = WitnerEnemy3Image;
+            WinterEnemy3.Visibility = Visibility.Hidden;
 
             WinterEnemyList.Add(new Enemy(100));
             WinterEnemyList.Add(new Enemy(100));
             WinterEnemyList.Add(new Enemy(100));
             WinterEnemyList.Add(new Enemy(100));
             WinterEnemyList.Add(new Enemy(150));
+
+            WinterEnemyImageList.Add(WinterEnemy1);
+            WinterEnemyImageList.Add(WinterEnemy2);
+            WinterEnemyImageList.Add(WinterEnemy3);
 
 
         }
@@ -55,8 +74,14 @@ namespace TheGame
             {
                 if(i.EnemyHealth < 0)
                 {
-                    WinterEnemy1.Visibility = Visibility.Hidden;
-                    counter += 1;
+                    
+                    foreach (var shape in WinterEnemyImageList)
+                    {
+                        shape.Visibility = Visibility.Visible;
+                        shape.Visibility = Visibility.Hidden;
+                        //shape.Visibility = Visibility.Visible;
+                        counter += 1;
+                    }
                 }
             }
             lblScore.Content = "Score =" + counter.ToString();
