@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\drago\\OneDrive\\Documents\\DurhamCollage\\Winter2023\\OOP\\FinalProject\\TheGame\\TheGame.csproj",
+      "projectUniqueName": "C:\\Durham College\\Winter2023\\OOP-4200\\FinalProject\\TheGame\\TheGame.csproj",
       "projectName": "TheGame",
-      "projectPath": "C:\\Users\\drago\\OneDrive\\Documents\\DurhamCollage\\Winter2023\\OOP\\FinalProject\\TheGame\\TheGame.csproj",
+      "projectPath": "C:\\Durham College\\Winter2023\\OOP-4200\\FinalProject\\TheGame\\TheGame.csproj",
       "packagesPath": "C:\\Users\\drago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\drago\\OneDrive\\Documents\\DurhamCollage\\Winter2023\\OOP\\FinalProject\\TheGame\\obj\\",
+      "outputPath": "C:\\Durham College\\Winter2023\\OOP-4200\\FinalProject\\TheGame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\drago\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -65,7 +65,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
