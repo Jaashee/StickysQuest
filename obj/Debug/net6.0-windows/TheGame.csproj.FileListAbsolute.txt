@@ -133,3 +133,5 @@ C:\Users\elhza\Source\Repos\TheGame\obj\Debug\net6.0-windows\refint\TheGame.dll
 C:\Users\elhza\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.pdb
 C:\Users\elhza\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.genruntimeconfig.cache
 C:\Users\elhza\Source\Repos\TheGame\obj\Debug\net6.0-windows\ref\TheGame.dll
+C:\Users\r12d1\source\repos\TheGame\obj\Debug\net6.0-windows\CreateCharacter.g.cs
+C:\Users\r12d1\source\repos\TheGame\obj\Debug\net6.0-windows\CreateCharacter.baml

@@ -27,7 +27,7 @@ namespace TheGame
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new WinterTower());
+            this.NavigationService.Navigate(new CreateCharacter());
         }
         private void btnQuit_Click(object sender, RoutedEventArgs e)
         {

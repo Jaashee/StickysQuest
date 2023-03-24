@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
@@ -8,12 +9,16 @@ using System.Windows.Media.Imaging;
 
 namespace TheGame
 {
+
+
     public class Player 
     {
 
 
         public string PlayerName { get; set; }
         public BitmapImage PlayerImage { get; set; }
+        public BitmapImage PlayerHat { get; set; }
+
         public int PlayerHealth { get; set; }
         public int PlayerStamina { get; set; }
         public int PlayerMana { get; set; }
@@ -29,11 +34,12 @@ namespace TheGame
         {
 
         }
-        public Player(string PlayerName, int PlayerHealth, int PlayerStamina, int PlayerMana, int PlayerLevel, 
+        public Player(string PlayerName, string PlayerColour, string PlayerHat, int PlayerHealth, int PlayerStamina, int PlayerMana, int PlayerLevel, 
             int PlayerScore, Weapon PlayerWeapon, Wand PlayerWand, Potion PlayerPotion)
         {
             this.PlayerName = PlayerName;
-            this.PlayerImage = new BitmapImage(new Uri("Images/" + PlayerName + ".png", UriKind.Relative));
+            this.PlayerImage = new BitmapImage(new Uri("Images/" + PlayerColour + ".png", UriKind.Relative));
+            this.PlayerHat = new BitmapImage(new Uri("Images/" + PlayerHat + ".png", UriKind.Relative));
             this.PlayerHealth = PlayerHealth;
             this.PlayerStamina = PlayerStamina;
             this.PlayerMana = PlayerMana;
@@ -45,22 +51,34 @@ namespace TheGame
 
         }
 
-/*        public Player(string PlayerName, string PlayerImage, int PlayerHealth, int PlayerStamina, int PlayerMana, int PlayerLevel, int PlayerScore)
+        public void ChangeColour( string Colour)
         {
-            this.PlayerName = PlayerName;
-            this.PlayerImage = PlayerImage;
-            this.PlayerHealth = PlayerHealth;
-            this.PlayerStamina = PlayerStamina;
-            this.PlayerMana = PlayerMana;
-            this.PlayerLevel = PlayerLevel;
-            this.PlayerScore = PlayerScore;
-            this.PlayerWeapon = new Weapon();
-            this.PlayerWand = new Wand();
-            this.PlayerPotion = new Potion();
+            this.PlayerImage = new BitmapImage(new Uri("Images/" + Colour + ".png", UriKind.Relative));
+        }
+        public void ChangeHat(string Hat)
+        {
+            this.PlayerHat = new BitmapImage(new Uri("Images/" + Hat + ".png", UriKind.Relative));
+        }
 
-        }*/
+        /*        public Player(string PlayerName, string PlayerImage, int PlayerHealth, int PlayerStamina, int PlayerMana, int PlayerLevel, int PlayerScore)
+                {
+                    this.PlayerName = PlayerName;
+                    this.PlayerImage = PlayerImage;
+                    this.PlayerHealth = PlayerHealth;
+                    this.PlayerStamina = PlayerStamina;
+                    this.PlayerMana = PlayerMana;
+                    this.PlayerLevel = PlayerLevel;
+                    this.PlayerScore = PlayerScore;
+                    this.PlayerWeapon = new Weapon();
+                    this.PlayerWand = new Wand();
+                    this.PlayerPotion = new Potion();
+
+                }*/
 
 
 
     }
+
+
 }
+

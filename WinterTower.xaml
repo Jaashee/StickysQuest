@@ -36,6 +36,8 @@
             <Rectangle x:Name="Weapon" Height="250" Width="250" Fill="Yellow" Canvas.Left="140" Canvas.Top="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Rectangle x:Name="Wand" Height="250" Width="250" Fill="Yellow" Canvas.Left="140" Canvas.Top="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Rectangle Name="PlayerRect" Height="250" Width="250" Fill="Yellow" Canvas.Left="140" Canvas.Top="100" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Rectangle Name="Hat" Height="250" Width="250" Fill="Yellow" Canvas.Left="140" Canvas.Top="100" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
             <TextBox x:Name="txtActionDisplay" Canvas.Left="270" TextWrapping="Wrap" Canvas.Top="385" Width="382" HorizontalAlignment="Left" VerticalAlignment="Center" Height="55" IsEnabled="False"/>
 
         </Canvas>

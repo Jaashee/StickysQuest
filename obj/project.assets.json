@@ -8,23 +8,24 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\elhza\\.nuget\\packages\\": {},
+    "C:\\Users\\r12d1\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elhza\\Source\\Repos\\TheGame\\TheGame.csproj",
+      "projectUniqueName": "C:\\Users\\r12d1\\source\\repos\\TheGame\\TheGame.csproj",
       "projectName": "TheGame",
-      "projectPath": "C:\\Users\\elhza\\Source\\Repos\\TheGame\\TheGame.csproj",
-      "packagesPath": "C:\\Users\\elhza\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elhza\\Source\\Repos\\TheGame\\obj\\",
+      "projectPath": "C:\\Users\\r12d1\\source\\repos\\TheGame\\TheGame.csproj",
+      "packagesPath": "C:\\Users\\r12d1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\r12d1\\source\\repos\\TheGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\elhza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\r12d1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\MicroFocus.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -32,6 +33,8 @@
         "net6.0-windows"
       ],
       "sources": {
+        "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
+        "C:\\Program Files (x86)\\Micro Focus\\Visual COBOL\\NuGetPackages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -69,7 +72,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

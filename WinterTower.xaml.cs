@@ -26,12 +26,17 @@ namespace TheGame
         public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", 15, 10);
         public static Wand MagicWand = new Wand("MagicWand", "The standard magical instrument", 25, 10, 25);
         public static Potion Heal = new Potion();
+        public static Enemy_Attack Roar = new(1, "Roar", "The enemy ferociously roars!", 10);
+        public static Enemy_Attack Swipe = new(2, "Swipe", "The enemy swipes at you!", 15);
+        public static Enemy_Attack Explosion = new(3, "Explosion", "The enemy explodes!", 25);
+        public static Enemy_Attack IceMist = new(4, "Ice Mist", "The enemy blows icy mist at you!", 10);
+        public static Enemy_Attack Blizzard = new(5, "Blizzard", "The enemy unleashes a blizzard!", 25);
 
 
-        Player Player1 = new Player("Player", 100, 100, 100, 1, 0, Dagger, MagicWand, Heal);
-        Enemy Enemy1 = new Enemy(1, "Yeti", "an evil monster", 50, 1, 15, "Minion");
-        Enemy Enemy2 = new Enemy(1, "Bomb", "an evil bomb monster", 50, 1, 15, "Minion");
-        Enemy Enemy3 = new Enemy(1, "SnowJoker", "an evil snow joker monster", 50, 1, 15, "Minion");
+       Player Player1 = new Player();
+        Enemy Enemy1 = new Enemy(1, "Yeti", "an evil monster", 50, Roar, Swipe, 1, 15, "Minion");
+        Enemy Enemy2 = new Enemy(2, "Bomb", "an evil bomb monster", 50, Explosion, IceMist, 1, 15, "Minion");
+        Enemy Enemy3 = new Enemy(3, "SnowJoker", "an evil snow joker monster", 50, IceMist, Blizzard, 1, 15, "Minion");
 
 
         List <Enemy> EnemyList = new List<Enemy>();
@@ -39,7 +44,7 @@ namespace TheGame
         List <Wand> WandList = new List<Wand>();
         
         
-        public WinterTower()
+        public WinterTower(Player CurrentPlayer)
         {
             InitializeComponent();
 
@@ -48,6 +53,8 @@ namespace TheGame
             EnemyList.Add(Enemy1);
             EnemyList.Add(Enemy2);
             EnemyList.Add(Enemy3);
+
+            Player1 = CurrentPlayer;
 
             WeaponList.Add(Dagger);
 
@@ -135,7 +142,7 @@ namespace TheGame
         {
             Random rd = new Random();
 
-            int rand_num = rd.Next(1, 2);
+            int rand_num = rd.Next(1, 3);
 
             if (rand_num == 1){
                 txtActionDisplay.Text += EnemyList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + EnemyList[0].Attack1.EnemyAttackName + " dealing " + EnemyList[0].Attack1.EnemyAttackDamage.ToString() + " damage.";
@@ -197,6 +204,10 @@ namespace TheGame
                 ImageBrush PlayerImage = new ImageBrush();
                 PlayerImage.ImageSource = Player1.PlayerImage;
                 PlayerRect.Fill = PlayerImage;
+
+                ImageBrush PlayerHat = new ImageBrush();
+                PlayerHat.ImageSource = Player1.PlayerHat;
+                Hat.Fill = PlayerHat;
 
                 ImageBrush WeaponImage1 = new ImageBrush();
                 WeaponImage1.ImageSource = Player1.PlayerWeapon.WeaponImage;
