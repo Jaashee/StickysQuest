@@ -3,6 +3,7 @@ using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,16 +23,21 @@ namespace TheGame
     /// </summary>
     public partial class WinterTower : Page
     {
-        public static Weapon BigSword = new Weapon("Dagger", "Short, but gets to the point", "Images/Dagger.png", 15, 10);
-        public static Wand FireWand = new Wand("Magic Wand", "The standard magical instrument", "Images/Wand.png", 25, 10, 25);
+        public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", 15, 10);
+        public static Wand MagicWand = new Wand("MagicWand", "The standard magical instrument", 25, 10, 25);
         public static Potion Heal = new Potion();
 
 
-        Player Player1 = new("Hero", "Images/Player.png", 100, 100, 100, 1, 0, BigSword, FireWand, Heal);
-        Enemy Enemy1 = new(1, "Monster", "an evil monster", "Images/WinterEnemy1.png", 50, 1, 15, "Minion");
+        Player Player1 = new Player("Player", 100, 100, 100, 1, 0, Dagger, MagicWand, Heal);
+        Enemy Enemy1 = new Enemy(1, "Yeti", "an evil monster", 50, 1, 15, "Minion");
+        Enemy Enemy2 = new Enemy(1, "Bomb", "an evil bomb monster", 50, 1, 15, "Minion");
+        Enemy Enemy3 = new Enemy(1, "SnowJoker", "an evil snow joker monster", 50, 1, 15, "Minion");
 
-        List<Enemy> WinterEnemyList = new List<Enemy>();
-        List <Shape> WinterEnemyImageList = new List<Shape>();
+
+        List <Enemy> EnemyList = new List<Enemy>();
+        List <Weapon> WeaponList = new List<Weapon>();
+        List <Wand> WandList = new List<Wand>();
+        
         
         public WinterTower()
         {
@@ -39,35 +45,16 @@ namespace TheGame
 
             FightCanvas.Focus();
 
-            
+            EnemyList.Add(Enemy1);
+            EnemyList.Add(Enemy2);
+            EnemyList.Add(Enemy3);
 
-            lblPlayerName.Content = Player1.PlayerName;
-            lblEnemyRole.Content = Enemy1.EnemyType;
-            lblEnemyName.Content = Enemy1.EnemyName;
-            btnAttack.Content = "Attack with " + Player1.PlayerWeapon.WeaponName;
-            btnAttackWand.Content = "Attack with " + Player1.PlayerWand.WandName;
+            WeaponList.Add(Dagger);
 
-            lblPlayerHP.Content = "HP: " + Player1.PlayerHealth.ToString();
-            lblPlayerSP.Content = "SP: " + Player1.PlayerStamina.ToString();
-            lblPlayerMP.Content = "MP: " + Player1.PlayerMana.ToString();
-            lblEnemyHP.Content = "HP: " + Enemy1.EnemyHealth.ToString();
+            WandList.Add(MagicWand);
 
+            RefreshScreen();
 
-            ImageBrush PlayerImage = new ImageBrush();
-            PlayerImage.ImageSource = new BitmapImage(new Uri(Player1.PlayerImage, UriKind.Relative));
-            PlayerRect.Fill = PlayerImage;
-
-            ImageBrush WeaponImage1 = new ImageBrush();
-            WeaponImage1.ImageSource = new BitmapImage(new Uri("Images/Dagger.png", UriKind.Relative));
-            Weapon.Fill = WeaponImage1;
-
-            ImageBrush WandImage = new ImageBrush();
-            WandImage.ImageSource = new BitmapImage(new Uri("Images/Wand.png", UriKind.Relative));
-            Wand.Fill = WandImage;
-
-            ImageBrush WitnerEnemy1Image = new ImageBrush();
-            WitnerEnemy1Image.ImageSource = new BitmapImage(new Uri(Enemy1.EnemyImage, UriKind.Relative));
-            WinterEnemy1.Fill = WitnerEnemy1Image;
 
 
         }
@@ -75,18 +62,19 @@ namespace TheGame
         private void btnAttack_Click(object sender, RoutedEventArgs e)
         {
             PlayerAttack();
-            if (Enemy1.EnemyHealth > 0)
+            if (EnemyList[0].EnemyHealth > 0)
             {
                 EnemyAttack();
             }
             else
             {
-                WinterEnemy1.Visibility = Visibility.Hidden;
+                //WinterEnemyRect.Visibility = Visibility.Hidden;
                 Player1.PlayerScore += Enemy1.EnemyXP;
                 lblScore.Content = "Score : " + Player1.PlayerScore.ToString();
-                btnAttack.IsEnabled = false;
-                btnAttackWand.IsEnabled = false;
-                txtActionDisplay.Text += Player1.PlayerName + " defeated " + Enemy1.EnemyName + " earning " + Enemy1.EnemyXP.ToString() + " score points!";
+/*                btnAttack.IsEnabled = false;
+                btnAttackWand.IsEnabled = false;*/
+                txtActionDisplay.Text += Player1.PlayerName + " defeated " + EnemyList[0].EnemyName + " earning " + EnemyList[0].EnemyXP.ToString() + " score points!";
+                EnemyRespawn();
 
             }
 
@@ -95,17 +83,18 @@ namespace TheGame
         private void btnAttackWand_Click(object sender, RoutedEventArgs e)
         {
             PlayerAttackWand();
-            if (Enemy1.EnemyHealth > 0)
+            if (EnemyList[0].EnemyHealth > 0)
             {
                 EnemyAttack();
             }
            else {
-                WinterEnemy1.Visibility = Visibility.Hidden;
+                
                 Player1.PlayerScore += Enemy1.EnemyXP;
                 lblScore.Content = "Score : " + Player1.PlayerScore.ToString();
-                btnAttack.IsEnabled = false;
-                btnAttackWand.IsEnabled = false;
-                txtActionDisplay.Text += Player1.PlayerName + " defeated " + Enemy1.EnemyName + " earning " + Enemy1.EnemyXP.ToString() + " score points!";
+/*                btnAttack.IsEnabled = false;
+                btnAttackWand.IsEnabled = false;*/
+                txtActionDisplay.Text += Player1.PlayerName + " defeated " + EnemyList[0].EnemyName + " earning " + EnemyList[0].EnemyXP.ToString() + " score points!";
+                EnemyRespawn();
 
 
             }
@@ -119,18 +108,18 @@ namespace TheGame
 
         public void PlayerAttack()
         {
-            txtActionDisplay.Text = Player1.PlayerName + " attacked " + Enemy1.EnemyName + " with " + Player1.PlayerWeapon.WeaponName + " dealing " + Player1.PlayerWeapon.WeaponDamage.ToString() + " damage.\n";
+            txtActionDisplay.Text = Player1.PlayerName + " attacked " + EnemyList[0].EnemyName + " with " + Player1.PlayerWeapon.WeaponName + " dealing " + Player1.PlayerWeapon.WeaponDamage.ToString() + " damage.\n";
 
             Player1.PlayerStamina -= Player1.PlayerWeapon.SPCost;
             lblPlayerSP.Content = "SP: " + Player1.PlayerStamina.ToString();
-            Enemy1.EnemyHealth -= Player1.PlayerWeapon.WeaponDamage;
-            lblEnemyHP.Content = "HP: " + Enemy1.EnemyHealth.ToString();
+            EnemyList[0].EnemyHealth -= Player1.PlayerWeapon.WeaponDamage;
+            lblEnemyHP.Content = "HP: " + EnemyList[0].EnemyHealth.ToString();
 
         }
         public void PlayerAttackWand()
         {
 
-            txtActionDisplay.Text = Player1.PlayerName + " attacked " + Enemy1.EnemyName + " with " + Player1.PlayerWand.WandName + " dealing " + Player1.PlayerWand.WandDamage.ToString() + " damage.\n";
+            txtActionDisplay.Text = Player1.PlayerName + " attacked " + EnemyList[0].EnemyName + " with " + Player1.PlayerWand.WandName + " dealing " + Player1.PlayerWand.WandDamage.ToString() + " damage.\n";
 
             Player1.PlayerStamina -= Player1.PlayerWand.SPCost;
             Player1.PlayerMana -= Player1.PlayerWand.MPCost;
@@ -138,8 +127,8 @@ namespace TheGame
             lblPlayerSP.Content = "SP: " + Player1.PlayerStamina.ToString();
             lblPlayerMP.Content = "MP: " + Player1.PlayerMana.ToString();
 
-            Enemy1.EnemyHealth -= Player1.PlayerWand.WandDamage;
-            lblEnemyHP.Content = "HP: " + Enemy1.EnemyHealth.ToString();
+            EnemyList[0].EnemyHealth -= Player1.PlayerWand.WandDamage;
+            lblEnemyHP.Content = "HP: " + EnemyList[0].EnemyHealth.ToString();
 
         }
         public void EnemyAttack()
@@ -149,19 +138,79 @@ namespace TheGame
             int rand_num = rd.Next(1, 2);
 
             if (rand_num == 1){
-                txtActionDisplay.Text += Enemy1.EnemyName + " attacked " + Player1.PlayerName + " with " + Enemy1.Attack1.EnemyAttackName + " dealing " + Enemy1.Attack1.EnemyAttackDamage.ToString() + " damage.";
-                Player1.PlayerHealth -= Enemy1.Attack1.EnemyAttackDamage;
+                txtActionDisplay.Text += EnemyList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + EnemyList[0].Attack1.EnemyAttackName + " dealing " + EnemyList[0].Attack1.EnemyAttackDamage.ToString() + " damage.";
+                Player1.PlayerHealth -= EnemyList[0].Attack1.EnemyAttackDamage;
 
             }
             else
             {
-                txtActionDisplay.Text += Enemy1.EnemyName + " attacked " + Player1.PlayerName + " with " + Enemy1.Attack2.EnemyAttackName + " dealing " + Enemy1.Attack2.EnemyAttackDamage.ToString() + " damage.";
-                Player1.PlayerHealth -= Enemy1.Attack2.EnemyAttackDamage;
+                txtActionDisplay.Text += EnemyList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + EnemyList[0].Attack2.EnemyAttackName + " dealing " + EnemyList[0].Attack2.EnemyAttackDamage.ToString() + " damage.";
+                Player1.PlayerHealth -= EnemyList[0].Attack2.EnemyAttackDamage;
 
             }
 
 
             lblPlayerHP.Content = "HP: " + Player1.PlayerHealth.ToString();
+
+
+        }
+
+        public void PlayerDied()
+        {
+            Application.Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
+            Application.Current.Shutdown();
+        }
+
+        public void EnemyRespawn()
+        {
+            EnemyList.RemoveAt(0);
+            if(EnemyList.Count == 0)
+            {
+                //IF YOU KILL AL THE ENEMYIES, THIS HAPPENS
+                Application.Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
+                Application.Current.Shutdown();
+            }
+            else
+            {
+                RefreshScreen();
+            }
+            
+        }
+        public void RefreshScreen()
+        {
+            if (EnemyList.Count > 0) 
+            {
+                lblPlayerName.Content = Player1.PlayerName;
+                lblEnemyRole.Content = EnemyList[0].EnemyType;
+                lblEnemyName.Content = EnemyList[0].EnemyName;
+                btnAttack.Content = "Attack with " + Player1.PlayerWeapon.WeaponName;
+                btnAttackWand.Content = "Attack with " + Player1.PlayerWand.WandName;
+
+                lblPlayerHP.Content = "HP: " + Player1.PlayerHealth.ToString();
+                lblPlayerSP.Content = "SP: " + Player1.PlayerStamina.ToString();
+                lblPlayerMP.Content = "MP: " + Player1.PlayerMana.ToString();
+                lblEnemyHP.Content = "HP: " + EnemyList[0].ToString();
+
+
+
+
+                ImageBrush PlayerImage = new ImageBrush();
+                PlayerImage.ImageSource = Player1.PlayerImage;
+                PlayerRect.Fill = PlayerImage;
+
+                ImageBrush WeaponImage1 = new ImageBrush();
+                WeaponImage1.ImageSource = Player1.PlayerWeapon.WeaponImage;
+                Weapon.Fill = WeaponImage1;
+
+                ImageBrush WandImage = new ImageBrush();
+                WandImage.ImageSource = Player1.PlayerWand.WandImage;
+                Wand.Fill = WandImage;
+
+                ImageBrush WitnerEnemyImage = new ImageBrush();
+                WitnerEnemyImage.ImageSource = EnemyList[0].EnemyImage;
+                WinterEnemyRect.Fill = WitnerEnemyImage;
+            }
+            
 
 
         }

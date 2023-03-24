@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace TheGame
 {
@@ -10,7 +11,7 @@ namespace TheGame
     {
         public string WeaponName { get; set; }
         public string WeaponDesc { get; set; }
-        public string WeaponImage { get; set; }
+        public BitmapImage WeaponImage { get; set; }
         public int WeaponDamage { get; set; }
         public int SPCost { get; set; }
 
@@ -26,11 +27,11 @@ namespace TheGame
 
         }
 
-        public Weapon(string WeaponName, string WeaponDesc, string WeaponImage, int WeaponDamage, int SPCost)
+        public Weapon(string WeaponName, string WeaponDesc, int WeaponDamage, int SPCost)
         {
             this.WeaponName = WeaponName;
             this.WeaponDesc = WeaponDesc;
-            this.WeaponImage = WeaponImage;
+            this.WeaponImage = new BitmapImage(new Uri("Images/" + WeaponName + ".png", UriKind.Relative)); ;
             this.WeaponDamage = WeaponDamage;
             this.SPCost = SPCost;
 

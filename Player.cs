@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 
 namespace TheGame
@@ -12,7 +13,7 @@ namespace TheGame
 
 
         public string PlayerName { get; set; }
-        public string PlayerImage { get; set; }
+        public BitmapImage PlayerImage { get; set; }
         public int PlayerHealth { get; set; }
         public int PlayerStamina { get; set; }
         public int PlayerMana { get; set; }
@@ -28,11 +29,11 @@ namespace TheGame
         {
 
         }
-        public Player(string PlayerName, string PlayerImage, int PlayerHealth, int PlayerStamina, int PlayerMana, int PlayerLevel, 
+        public Player(string PlayerName, int PlayerHealth, int PlayerStamina, int PlayerMana, int PlayerLevel, 
             int PlayerScore, Weapon PlayerWeapon, Wand PlayerWand, Potion PlayerPotion)
         {
             this.PlayerName = PlayerName;
-            this.PlayerImage = PlayerImage;
+            this.PlayerImage = new BitmapImage(new Uri("Images/" + PlayerName + ".png", UriKind.Relative));
             this.PlayerHealth = PlayerHealth;
             this.PlayerStamina = PlayerStamina;
             this.PlayerMana = PlayerMana;
