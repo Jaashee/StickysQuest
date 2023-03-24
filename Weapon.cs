@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheGame
 {
-    public class Weapon
+    public class Weapon  
     {
         public string WeaponName { get; set; }
         public string WeaponDesc { get; set; }
@@ -15,15 +15,14 @@ namespace TheGame
         public int SPCost { get; set; }
 
 
-
         public Weapon()
         {
-            this.WeaponName = "Dagger";
+/*            this.WeaponName = "Dagger";
             this.WeaponDesc = "Short, but gets to the point";
 
             this.WeaponImage = "Images/Dagger.png";
             this.WeaponDamage = 15;
-            this.SPCost = 10;
+            this.SPCost = 10;*/
 
         }
 

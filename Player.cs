@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TheGame
 {
-    public class Player
+    public class Player 
     {
 
 
@@ -21,11 +21,15 @@ namespace TheGame
         public Weapon PlayerWeapon { get; set; }
         public Wand PlayerWand { get; set; }
         public Potion PlayerPotion { get; set; }
+
+
+
         public Player()
         {
 
         }
-        public Player(string PlayerName, string PlayerImage, int PlayerHealth, int PlayerStamina, int PlayerMana, int PlayerLevel, int PlayerScore, Weapon PlayerWeapon, Wand PlayerWand, Potion PlayerPotion)
+        public Player(string PlayerName, string PlayerImage, int PlayerHealth, int PlayerStamina, int PlayerMana, int PlayerLevel, 
+            int PlayerScore, Weapon PlayerWeapon, Wand PlayerWand, Potion PlayerPotion)
         {
             this.PlayerName = PlayerName;
             this.PlayerImage = PlayerImage;
@@ -40,7 +44,7 @@ namespace TheGame
 
         }
 
-        public Player(string PlayerName, string PlayerImage, int PlayerHealth, int PlayerStamina, int PlayerMana, int PlayerLevel, int PlayerScore)
+/*        public Player(string PlayerName, string PlayerImage, int PlayerHealth, int PlayerStamina, int PlayerMana, int PlayerLevel, int PlayerScore)
         {
             this.PlayerName = PlayerName;
             this.PlayerImage = PlayerImage;
@@ -53,7 +57,7 @@ namespace TheGame
             this.PlayerWand = new Wand();
             this.PlayerPotion = new Potion();
 
-        }
+        }*/
 
 
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,12 @@ namespace TheGame
     /// </summary>
     public partial class WinterTower : Page
     {
-        Player Player1 = new("Hero", "Images/Player.png", 100, 100, 100, 1, 0);
+        public static Weapon BigSword = new Weapon("Dagger", "Short, but gets to the point", "Images/Dagger.png", 15, 10);
+        public static Wand FireWand = new Wand("Magic Wand", "The standard magical instrument", "Images/Wand.png", 25, 10, 25);
+        public static Potion Heal = new Potion();
+
+
+        Player Player1 = new("Hero", "Images/Player.png", 100, 100, 100, 1, 0, BigSword, FireWand, Heal);
         Enemy Enemy1 = new(1, "Monster", "an evil monster", "Images/WinterEnemy1.png", 50, 1, 15, "Minion");
 
         List<Enemy> WinterEnemyList = new List<Enemy>();
@@ -32,6 +38,8 @@ namespace TheGame
             InitializeComponent();
 
             FightCanvas.Focus();
+
+            
 
             lblPlayerName.Content = Player1.PlayerName;
             lblEnemyRole.Content = Enemy1.EnemyType;
@@ -47,14 +55,14 @@ namespace TheGame
 
             ImageBrush PlayerImage = new ImageBrush();
             PlayerImage.ImageSource = new BitmapImage(new Uri(Player1.PlayerImage, UriKind.Relative));
-            Player.Fill = PlayerImage;
+            PlayerRect.Fill = PlayerImage;
 
-            ImageBrush WeaponImage = new ImageBrush();
-            WeaponImage.ImageSource = new BitmapImage(new Uri(Player1.PlayerWeapon.WeaponImage, UriKind.Relative));
-            Weapon.Fill = WeaponImage;
+            ImageBrush WeaponImage1 = new ImageBrush();
+            WeaponImage1.ImageSource = new BitmapImage(new Uri("Images/Dagger.png", UriKind.Relative));
+            Weapon.Fill = WeaponImage1;
 
             ImageBrush WandImage = new ImageBrush();
-            WandImage.ImageSource = new BitmapImage(new Uri(Player1.PlayerWand.WandImage, UriKind.Relative));
+            WandImage.ImageSource = new BitmapImage(new Uri("Images/Wand.png", UriKind.Relative));
             Wand.Fill = WandImage;
 
             ImageBrush WitnerEnemy1Image = new ImageBrush();

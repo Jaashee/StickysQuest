@@ -19,12 +19,7 @@ namespace TheGame
 
         public Wand()
         {
-            this.WandName = "Magic Wand";
-            this.WandDesc = "The standard magical instrument";
-            this.WandImage = "Images/Wand.png";
-            this.WandDamage = 25;
-            this.SPCost = 10;
-            this.MPCost = 25;
+
 
         }
 
