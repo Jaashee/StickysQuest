@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media.Imaging;
 
 
@@ -60,6 +62,61 @@ namespace TheGame
             this.PlayerHat = new BitmapImage(new Uri("Images/" + Hat + ".png", UriKind.Relative));
         }
 
+        public string UsePotion()
+        {
+            char[] PotionEffects = this.PlayerPotion.PotionEffect.ToCharArray();//100500
+            char health = PotionEffects[0];
+            char stamina = PotionEffects[1];
+            char mana = PotionEffects[2];
+            int amount = int.Parse(PotionEffects[3].ToString() + PotionEffects[4].ToString());
+            char percent = PotionEffects[5];
+            string flavourText = this.PlayerName + "'s " +this.PlayerPotion.PotionName + " restored " + amount;
+
+            if (health.ToString() == "1")
+            {
+                this.PlayerHealth = this.PlayerHealth + amount;
+                flavourText += " health";
+            }
+            if (stamina == 1)
+            {
+                this.PlayerStamina = this.PlayerStamina + amount;
+                flavourText += " stamina";
+
+            }
+            if (mana == 1)
+            {
+                this.PlayerMana = this.PlayerMana + amount;
+                flavourText += " of mana";
+
+            }
+            flavourText += "\n";
+
+            return (flavourText);
+        }
+        public void ValidateName(string Name)
+        {
+            string Error = "";
+            if (string.IsNullOrEmpty(Name))
+            {
+                Error = "Name cannot be empty";
+            }
+            else if (Name.Length > 20)
+            {
+                Error = "Name Cannot longer than 20 characters";
+
+            }
+
+            if (string.IsNullOrEmpty(Error))
+            {
+                this.PlayerName = Name;
+
+            }
+            else
+            {
+                MessageBox.Show(Error);
+                return;
+            }
+        }
         /*        public Player(string PlayerName, string PlayerImage, int PlayerHealth, int PlayerStamina, int PlayerMana, int PlayerLevel, int PlayerScore)
                 {
                     this.PlayerName = PlayerName;

@@ -20,10 +20,10 @@ namespace TheGame
     /// </summary>
     public partial class CreateCharacter : Page
     {
-        public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", 15, 10);
-        public static Wand MagicWand = new Wand("MagicWand", "The standard magical instrument", 25, 10, 25);
-        public static Potion Heal = new Potion();
-        Player Player1 = new Player("Player", "Player-Black", "Hat-None", 100, 100, 100, 1, 0, Dagger, MagicWand, Heal);
+        public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", "Weapon-Dagger","Sprite-Dagger", 15, 10);
+        public static Wand MagicWand = new Wand("MagicWand", "The standard magical instrument", "Weapon-MagicWand", "Sprite-MagicWand", 25, 10, 25);
+        public static Potion RedPotion = new Potion("Red Potion", "Heals 50 hp","Sprite-RedPotion" ,"100500");
+        Player Player1 = new Player("Player", "Player-Black", "Hat-None", 100, 100, 100, 1, 0, Dagger, MagicWand, RedPotion);
 
 
         public CreateCharacter()
@@ -39,8 +39,15 @@ namespace TheGame
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new WinterTower(Player1));
+            string PlayernName = "";
+            PlayernName = txtPlayerName.Text;
+            Player1.ValidateName(PlayernName);
 
+            if (Player1.PlayerName == PlayernName)
+            {
+                this.NavigationService.Navigate(new WinterTower(Player1));
+
+            }
         }
 
         private void cmboColour_SelectionChanged(object sender, SelectionChangedEventArgs e)

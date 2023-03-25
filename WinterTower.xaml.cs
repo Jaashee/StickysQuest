@@ -23,9 +23,9 @@ namespace TheGame
     /// </summary>
     public partial class WinterTower : Page
     {
-        public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", 15, 10);
-        public static Wand MagicWand = new Wand("MagicWand", "The standard magical instrument", 25, 10, 25);
-        public static Potion Heal = new Potion();
+        public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", "Weapon-Dagger", "Sprite-Dagger", 15, 10);
+        public static Wand MagicWand = new Wand("MagicWand", "The standard magical instrument", "Weapon-MagicWand", "Sprite-MagicWand", 25, 10, 25);
+        public static Potion RedPotion = new Potion("Red Potion", "Heals 50 hp", "Sprite-RedPotion", "H~~50~");
         public static Enemy_Attack Roar = new(1, "Roar", "The enemy ferociously roars!", 10);
         public static Enemy_Attack Swipe = new(2, "Swipe", "The enemy swipes at you!", 15);
         public static Enemy_Attack Explosion = new(3, "Explosion", "The enemy explodes!", 25);
@@ -138,6 +138,12 @@ namespace TheGame
             lblEnemyHP.Content = "HP: " + EnemyList[0].EnemyHealth.ToString();
 
         }
+        private void btnPotion_Click(object sender, RoutedEventArgs e)
+        {
+            txtActionDisplay.Text = Player1.UsePotion();
+            EnemyAttack();
+        }
+
         public void EnemyAttack()
         {
             Random rd = new Random();
@@ -190,8 +196,18 @@ namespace TheGame
                 lblPlayerName.Content = Player1.PlayerName;
                 lblEnemyRole.Content = EnemyList[0].EnemyType;
                 lblEnemyName.Content = EnemyList[0].EnemyName;
-                btnAttack.Content = "Attack with " + Player1.PlayerWeapon.WeaponName;
-                btnAttackWand.Content = "Attack with " + Player1.PlayerWand.WandName;
+
+                ImageBrush WeaponSprite = new ImageBrush();
+                WeaponSprite.ImageSource = Player1.PlayerWeapon.WeaponSprite;
+                btnAttack.Background = WeaponSprite;
+
+                ImageBrush WandSprite = new ImageBrush();
+                WandSprite.ImageSource = Player1.PlayerWand.WandSprite;
+                btnAttackWand.Background = WandSprite;
+
+                ImageBrush PotionSprite = new ImageBrush();
+                PotionSprite.ImageSource = Player1.PlayerPotion.PotionImage;
+                btnPotion.Background = PotionSprite;
 
                 lblPlayerHP.Content = "HP: " + Player1.PlayerHealth.ToString();
                 lblPlayerSP.Content = "SP: " + Player1.PlayerStamina.ToString();
@@ -225,6 +241,7 @@ namespace TheGame
 
 
         }
+
 
     }
 }

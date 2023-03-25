@@ -23,6 +23,10 @@
             <ComboBoxItem Content="Top Hat"/>
 
         </ComboBox>
+        <Label Content="Player Colour" HorizontalAlignment="Left" Margin="400,74,0,0" VerticalAlignment="Top"/>
+        <Label Content="Player Hat" HorizontalAlignment="Left" Margin="549,74,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPlayerName" HorizontalAlignment="Left" Margin="474,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Player Name" HorizontalAlignment="Left" Margin="474,25,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

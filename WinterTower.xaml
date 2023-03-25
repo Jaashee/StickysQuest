@@ -22,7 +22,9 @@
         </Grid.ColumnDefinitions>
         <Canvas Name="FightCanvas" Focusable="True" HorizontalAlignment="Left" Width="910" Grid.RowSpan="1" Grid.ColumnSpan="3">
             <Rectangle Name="WinterEnemyRect" Height="250" Width="250" Fill="Yellow" Canvas.Left="527" Canvas.Top="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Button Name="btnAttack" Content="" Canvas.Left="111" Canvas.Top="355" HorizontalAlignment="Left" VerticalAlignment="Center" Width="152" Click="btnAttack_Click" Height="25" ClipToBounds="True"/>
+            <Button Name="btnAttack" Content="" Canvas.Left="86" Canvas.Top="355" HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Click="btnAttack_Click" Height="50" ClipToBounds="True">
+
+            </Button>
             <Button Name="btnBack" Content="Back" Canvas.Left="769" Canvas.Top="10" Height="36" Width="121" Click="btnBack_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Label Name ="lblScore" Content="Score =" VerticalAlignment="Top" Width="190" FontSize="20" FontWeight="Bold" FontFamily="Arial" HorizontalAlignment="Left" Canvas.Left="16" Canvas.Top="21" Height="49"/>
             <Label x:Name="lblPlayerName" Content="" Canvas.Left="210" Canvas.Top="70" HorizontalAlignment="Left" VerticalAlignment="Center" Width="108" FontSize="16" FontFamily="Arial"/>
@@ -32,13 +34,14 @@
             <Label x:Name="lblPlayerSP" Content="" Canvas.Left="16" Canvas.Top="165" Width="108" FontSize="16" FontFamily="Arial" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Label x:Name="lblPlayerMP" Content="" Canvas.Left="16" Canvas.Top="198" Width="108" FontSize="16" FontFamily="Arial" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Label x:Name="lblEnemyHP" Content="" Canvas.Left="782" Canvas.Top="132" Width="108" FontSize="16" FontFamily="Arial" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.48,1.352"/>
-            <Button x:Name="btnAttackWand" Content="" Canvas.Left="270" Canvas.Top="355" Width="156" Click="btnAttackWand_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" ClipToBounds="True"/>
+            <Button x:Name="btnAttackWand" Content="" Canvas.Left="147" Canvas.Top="355" Width="50" Click="btnAttackWand_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Height="50" ClipToBounds="True"/>
             <Rectangle x:Name="Weapon" Height="250" Width="250" Fill="Yellow" Canvas.Left="140" Canvas.Top="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Rectangle x:Name="Wand" Height="250" Width="250" Fill="Yellow" Canvas.Left="140" Canvas.Top="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Rectangle Name="PlayerRect" Height="250" Width="250" Fill="Yellow" Canvas.Left="140" Canvas.Top="100" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Rectangle Name="Hat" Height="250" Width="250" Fill="Yellow" Canvas.Left="140" Canvas.Top="100" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
             <TextBox x:Name="txtActionDisplay" Canvas.Left="270" TextWrapping="Wrap" Canvas.Top="385" Width="382" HorizontalAlignment="Left" VerticalAlignment="Center" Height="55" IsEnabled="False"/>
+            <Button x:Name="btnPotion" Content="" Canvas.Left="210" Canvas.Top="355" Width="50"  Height="50" ClipToBounds="True" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnPotion_Click"/>
 
         </Canvas>
 
