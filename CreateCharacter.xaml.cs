@@ -58,6 +58,18 @@ namespace TheGame
             {
                 Player1.ChangeColour("Player-Red");
             }
+            else if (cmboColour.SelectedIndex == 2)
+            {
+                Player1.ChangeColour("Player-Pink");
+            }
+            else if (cmboColour.SelectedIndex == 3)
+            {
+                Player1.ChangeColour("Player-Green");
+            }
+            else if (cmboColour.SelectedIndex == 4)
+            {
+                Player1.ChangeColour("Player-Blue");
+            }
 
             RefreshScreen();
         }
@@ -68,11 +80,18 @@ namespace TheGame
             {
                 Player1.ChangeHat("Hat-None");
             }
-            else if (cmboColour.SelectedIndex == 1)
+            else if (cmboHat.SelectedIndex == 1)
             {
                 Player1.ChangeHat("Hat-Tophat");
             }
-
+            else if (cmboHat.SelectedIndex == 2)
+            {
+                Player1.ChangeHat("Hat-CatEars");
+            }
+            else if (cmboHat.SelectedIndex == 3)
+            {
+                Player1.ChangeHat("Hat-Space");
+            }
             RefreshScreen();
         }
     

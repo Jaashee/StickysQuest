@@ -16,12 +16,16 @@
         <ComboBox x:Name="cmboColour" HorizontalAlignment="Left" Margin="400,100,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" SelectionChanged="cmboColour_SelectionChanged">
             <ComboBoxItem Content="Black"/>
             <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Pink"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Blue"/>
 
         </ComboBox>
         <ComboBox x:Name="cmboHat" HorizontalAlignment="Left" Margin="549,100,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" SelectionChanged="cmboHat_SelectionChanged">
             <ComboBoxItem Content="None"/>
             <ComboBoxItem Content="Top Hat"/>
-
+            <ComboBoxItem Content="Cat Ears"/>
+            <ComboBoxItem Content="Space Helmet"/>
         </ComboBox>
         <Label Content="Player Colour" HorizontalAlignment="Left" Margin="400,74,0,0" VerticalAlignment="Top"/>
         <Label Content="Player Hat" HorizontalAlignment="Left" Margin="549,74,0,0" VerticalAlignment="Top"/>
