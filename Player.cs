@@ -22,8 +22,11 @@ namespace TheGame
         public BitmapImage PlayerHat { get; set; }
 
         public int PlayerHealth { get; set; }
+        public int PlayerCurrentHealth { get; set; }
         public int PlayerStamina { get; set; }
+        public int PlayerCurrentStamina { get; set; }
         public int PlayerMana { get; set; }
+        public int PlayerCurrentMana { get; set; }
         public int PlayerLevel { get; set; }
         public int PlayerScore { get; set; }
         public Weapon PlayerWeapon { get; set; }
@@ -43,8 +46,11 @@ namespace TheGame
             this.PlayerImage = new BitmapImage(new Uri("Images/" + PlayerColour + ".png", UriKind.Relative));
             this.PlayerHat = new BitmapImage(new Uri("Images/" + PlayerHat + ".png", UriKind.Relative));
             this.PlayerHealth = PlayerHealth;
+            this.PlayerCurrentHealth = PlayerHealth;
             this.PlayerStamina = PlayerStamina;
+            this.PlayerCurrentStamina = PlayerStamina;
             this.PlayerMana = PlayerMana;
+            this.PlayerCurrentMana = PlayerMana;
             this.PlayerLevel = PlayerLevel;
             this.PlayerScore = PlayerScore;
             this.PlayerWeapon = PlayerWeapon;
@@ -74,18 +80,29 @@ namespace TheGame
 
             if (health.ToString() == "1")
             {
-                this.PlayerHealth = this.PlayerHealth + amount;
+                this.PlayerCurrentHealth = this.PlayerCurrentHealth + amount;
+                if (this.PlayerCurrentHealth > this.PlayerHealth){
+                    this.PlayerCurrentHealth = this.PlayerHealth;
+                }
                 flavourText += " health";
             }
             if (stamina == 1)
             {
-                this.PlayerStamina = this.PlayerStamina + amount;
+                this.PlayerCurrentStamina = this.PlayerCurrentStamina + amount;
+                if (this.PlayerCurrentStamina > this.PlayerStamina)
+                {
+                    this.PlayerCurrentStamina = this.PlayerStamina;
+                }
                 flavourText += " stamina";
 
             }
             if (mana == 1)
             {
-                this.PlayerMana = this.PlayerMana + amount;
+                this.PlayerCurrentMana = this.PlayerCurrentMana + amount;
+                if (this.PlayerCurrentMana > this.PlayerMana)
+                {
+                    this.PlayerCurrentMana = this.PlayerMana;
+                }
                 flavourText += " of mana";
 
             }

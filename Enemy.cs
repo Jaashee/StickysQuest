@@ -34,12 +34,12 @@ namespace TheGame
             this.EnemyXP = 15;
             this.EnemyType = "minion";*/
         }
-        public Enemy(int EnemyId, string EnemyName, string EnemyDesc, int EnemyHealth, Enemy_Attack Attack1, Enemy_Attack Attack2, int EnemyLevel, int EnemyXP, string EnemyType)
+        public Enemy(int EnemyId, string EnemyName, string EnemyDesc, string EnemyImage,int EnemyHealth, Enemy_Attack Attack1, Enemy_Attack Attack2, int EnemyLevel, int EnemyXP, string EnemyType)
         {
             this.EnemyId = EnemyId;
             this.EnemyName = EnemyName;
             this.EnemyDesc = EnemyDesc;
-            this.EnemyImage = new BitmapImage(new Uri("Images/" + EnemyName + ".png", UriKind.Relative));
+            this.EnemyImage = new BitmapImage(new Uri("Images/" + EnemyImage + ".png", UriKind.Relative));
             this.EnemyHealth = EnemyHealth;
             this.Attack1 = Attack1;
             this.Attack2 = Attack2;
@@ -50,12 +50,12 @@ namespace TheGame
 
         }
 
-        public Enemy(int EnemyId, string EnemyName, string EnemyDesc, int EnemyHealth, int EnemyLevel, int EnemyXP, string EnemyType)
+        public Enemy(int EnemyId, string EnemyName, string EnemyDesc, string  enemyImage, int EnemyHealth, int EnemyLevel, int EnemyXP, string EnemyType)
         {
             this.EnemyId = EnemyId;
             this.EnemyName = EnemyName;
             this.EnemyDesc = EnemyDesc;
-            this.EnemyImage = new BitmapImage(new Uri("Images/" + EnemyName + ".png", UriKind.Relative)); 
+            this.EnemyImage = new BitmapImage(new Uri("Images/" + enemyImage + ".png", UriKind.Relative)); 
             this.EnemyHealth = EnemyHealth;
             this.Attack1 = new Enemy_Attack();
             this.Attack2 = new Enemy_Attack();

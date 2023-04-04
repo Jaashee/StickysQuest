@@ -42,6 +42,7 @@
 
             <TextBox x:Name="txtActionDisplay" Canvas.Left="270" TextWrapping="Wrap" Canvas.Top="385" Width="382" HorizontalAlignment="Left" VerticalAlignment="Center" Height="55" IsEnabled="False"/>
             <Button x:Name="btnPotion" Content="" Canvas.Left="210" Canvas.Top="355" Width="50"  Height="50" ClipToBounds="True" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnPotion_Click"/>
+            <Button x:Name="btnRest" Content="Rest" Canvas.Left="86" Canvas.Top="410" Width="174"  Height="30" ClipToBounds="True" Click="btnRest_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         </Canvas>
 

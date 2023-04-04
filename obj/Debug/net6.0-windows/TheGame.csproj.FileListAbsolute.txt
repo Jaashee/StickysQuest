@@ -135,3 +135,5 @@ C:\Users\elhza\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.genruntimec
 C:\Users\elhza\Source\Repos\TheGame\obj\Debug\net6.0-windows\ref\TheGame.dll
 C:\Users\r12d1\source\repos\TheGame\obj\Debug\net6.0-windows\CreateCharacter.g.cs
 C:\Users\r12d1\source\repos\TheGame\obj\Debug\net6.0-windows\CreateCharacter.baml
+C:\Users\r12d1\source\repos\TheGame\obj\Debug\net6.0-windows\Results.g.cs
+C:\Users\r12d1\source\repos\TheGame\obj\Debug\net6.0-windows\Results.baml
