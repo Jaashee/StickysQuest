@@ -6,13 +6,14 @@
       xmlns:local="clr-namespace:TheGame"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="TitleScreen">
+      Title="TitleScreen" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
 
-    <Grid VerticalAlignment="Top" Height="424" Margin="0,10,0,0">
-        
+
+    <Grid VerticalAlignment="Center" Height="430" Margin="10,0,10,0">
         <Button x:Name="btnStart" Content="Begin" HorizontalAlignment="Center" VerticalAlignment="Top" Height="33" Width="184" Margin="0,233,0,0" Click="btnStart_Click"/>
         <Button x:Name="btnOptions" Content="Options" HorizontalAlignment="Center" VerticalAlignment="Top" Height="33" Width="184" Margin="0,290,0,0" Click="btnOptions_Click"/>
         <Button x:Name="btnQuit" Content="Quit" HorizontalAlignment="Center" VerticalAlignment="Top" Height="33" Width="184" Margin="0,347,0,0" Click="btnQuit_Click"/>
 
     </Grid>
+
 </Page>

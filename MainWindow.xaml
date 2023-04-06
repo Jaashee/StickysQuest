@@ -9,6 +9,8 @@
         Title="The Sound Of Lightning" Height="550" Width="1000">
 
     <Grid VerticalAlignment="Top" Height="424" Margin="0,10,0,0">
+        <Image x:Name="imgBackground" Margin="0,-10,0,-114" Source="/Images/castle.png" Stretch="Fill" Visibility="Collapsed"/>
         <Frame x:Name="frmMasterFrame" Source="TitleScreen.xaml" NavigationUIVisibility="Hidden"/>
+
     </Grid>
 </Window>
