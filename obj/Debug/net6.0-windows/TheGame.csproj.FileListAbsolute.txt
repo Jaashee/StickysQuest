@@ -168,3 +168,5 @@ C:\Users\jasha\Source\Repos\TheGame\obj\Debug\net6.0-windows\refint\TheGame.dll
 C:\Users\jasha\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.pdb
 C:\Users\jasha\Source\Repos\TheGame\obj\Debug\net6.0-windows\TheGame.genruntimeconfig.cache
 C:\Users\jasha\Source\Repos\TheGame\obj\Debug\net6.0-windows\ref\TheGame.dll
+C:\Users\r12d1\source\repos\TheGame\bin\Debug\net6.0-windows\WpfAnimatedGif.dll
+C:\Users\r12d1\source\repos\TheGame\obj\Debug\net6.0-windows\TheGame.csproj.CopyComplete

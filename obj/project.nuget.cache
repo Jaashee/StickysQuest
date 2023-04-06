@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jngCeIP7prdgDjLFN5F0ZtSMbYLXGJI8PjkbWZ/TaBPay81X32tcVyZPlSn3Vu+hzepWeqNbxd6sWp/kEof5Ng==",
+  "dgSpecHash": "aJIwcJXlbiWwc56cMY+eIktOnfhbCf8q2eDYDoMlfJav7/oPI+eZTrcLo55PxCjnePgqha3TBdQc3qBPk9Ef3A==",
   "success": true,
   "projectFilePath": "C:\\Users\\r12d1\\source\\repos\\TheGame\\TheGame.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\r12d1\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

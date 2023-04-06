@@ -311,5 +311,40 @@ namespace TheGame
             EnemyAttack(1.5);
             RefreshScreen();
         }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (this.IsLoaded) // Check if the page is loaded
+            {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            if (mainWindow != null)
+            {
+                // Find the Image control with the name "imgBackground"
+                Image imgBackground = mainWindow.FindName("imgTower") as Image;
+                if (imgBackground != null)
+                {
+                    // Set the visibility of the image to Visible
+                    imgBackground.Visibility = Visibility.Visible;
+                }
+            }
+        }
+        }
+
+        // This event is triggered when the page is unloaded
+        private void Page_Unloaded(object sender, RoutedEventArgs e)
+        {
+            // Hide the background image when the TitleScreen page is unloaded
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            if (mainWindow != null)
+            {
+                // Find the Image control with the name "imgBackground"
+                Image imgBackground = mainWindow.FindName("imgTower") as Image;
+                if (imgBackground != null)
+                {
+                    // Set the visibility of the image to Collapsed
+                    imgBackground.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
+
     }
 }

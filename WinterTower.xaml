@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:TheGame"
       mc:Ignorable="d" 
       d:DesignHeight="450"
-      Title="WinterTower" WindowHeight="450" WindowWidth="910" HorizontalAlignment="Left" VerticalAlignment="Top">
+      Title="WinterTower" WindowHeight="450" WindowWidth="910" HorizontalAlignment="Left" VerticalAlignment="Top" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
 
     <Grid>
         <Grid.ColumnDefinitions>

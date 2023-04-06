@@ -35,7 +35,7 @@ namespace TheGame
                 if (mainWindow != null)
                 {
                     // Find the Image control with the name "imgBackground"
-                    Image imgBackground = mainWindow.FindName("imgBackground") as Image;
+                    Image imgBackground = mainWindow.FindName("imgTitle") as Image;
                     if (imgBackground != null)
                     {
                         // Set the visibility of the image to Visible
@@ -53,7 +53,7 @@ namespace TheGame
             if (mainWindow != null)
             {
                 // Find the Image control with the name "imgBackground"
-                Image imgBackground = mainWindow.FindName("imgBackground") as Image;
+                Image imgBackground = mainWindow.FindName("imgTitle") as Image;
                 if (imgBackground != null)
                 {
                     // Set the visibility of the image to Collapsed

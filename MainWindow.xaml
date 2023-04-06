@@ -3,13 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:TheGame"
         mc:Ignorable="d"
         
         Title="The Sound Of Lightning" Height="550" Width="1000">
 
     <Grid VerticalAlignment="Top" Height="424" Margin="0,10,0,0">
-        <Image x:Name="imgBackground" Margin="0,-10,0,-114" Source="/Images/castle.png" Stretch="Fill" Visibility="Collapsed"/>
+        <Image x:Name="imgTitle" Margin="0,-10,0,-114" Source="/Images/castle.png" Stretch="Fill" Visibility="Collapsed"/>
+        <Image x:Name="imgTower" Margin="0,-10,0,-114" gif:ImageBehavior.AnimatedSource="/Images/dungeon.gif" Stretch="Fill" Visibility="Collapsed"/>
         <Frame x:Name="frmMasterFrame" Source="TitleScreen.xaml" NavigationUIVisibility="Hidden"/>
 
     </Grid>
