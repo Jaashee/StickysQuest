@@ -306,7 +306,7 @@ namespace TheGame
         {
             Player1.PlayerCurrentStamina += (Player1.PlayerStamina/1.5);
             Player1.PlayerCurrentMana += (Player1.PlayerMana/1.5);
-            txtActionDisplay.Text += Player1.PlayerName + " took a rest to recover their stamina and mana, leaving themselves open to attack! \n";
+            txtActionDisplay.Text = Player1.PlayerName + " took a rest to recover their stamina and mana, leaving themselves open to attack! \n";
 
             EnemyAttack(1.5);
             RefreshScreen();
