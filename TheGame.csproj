@@ -8,10 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\castle.png" />
+    <None Remove="Images\dungeon.gif" />
     <None Remove="Sprite-Dagger.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\castle.png" />
+    <Resource Include="Images\dungeon.gif" />
     <Resource Include="Sprite-Dagger.png" />
   </ItemGroup>
 
