@@ -23,9 +23,10 @@ namespace TheGame
     /// </summary>
     public partial class WinterTower : Page
     {
-        public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", "Weapon-Dagger", "Sprite-Dagger", 15, 10);
-        public static Wand MagicWand = new Wand("MagicWand", "The standard magical instrument", "Weapon-MagicWand", "Sprite-MagicWand", 25, 10, 25);
-        public static Potion RedPotion = new Potion("Red Potion", "Heals 50 hp", "Sprite-RedPotion", "H~~50~");
+    
+        public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", "Weapon-Dagger", "Sprite-Dagger", "Stab", 15, "", 0, 10);
+        public static Wand MagicWand = new Wand("MagicWand", "The standard magical instrument", "Weapon-MagicWand", "Sprite-MagicWand", "Holy", 25, 10, 25);
+        public static Potion RedPotion = new Potion("Red Potion", "Heals 50 hp", "Sprite-RedPotion", "100500");
         public static Enemy_Attack Bounce = new(1, "Bounce", "The enemy bounces high and lands on you!", 10);
         public static Enemy_Attack Tackle = new(2, "Tackle", "The enemy tackles you!", 15);
         public static Enemy_Attack WaterTrap = new(3, "WaterTrap", "The enemy lures you to the water and drags you under!", 25);
@@ -33,12 +34,28 @@ namespace TheGame
         public static Enemy_Attack SlimeSlam = new(5, "Slime Slam", "The enemy slime bounces incredibly high and lands with thunderous impact!", 30);
         public static Enemy_Attack LavaBurst = new(6, "Lava Burst", "The enemy bursts a lava bubble!", 20);
 
+
+        public static string[] SlimeWeak = { "Slash","Stab" };
+        public static double[] SlimeWeakEffect = { 2.0, 0.5 };
+        public static string[] LavaSlimeWeak = { "Slash", "Stab" ,"Water"};
+        public static double[] LavaSlimeWeakEffect = { 2.0, 0.5 ,2.0}; 
+        public static string[] SnowSlimeWeak = { "Slash", "Stab","Smash","Water" };
+        public static double[] SnowSlimeWeakEffect = { 2.0, 0.5, 2.0, 2.0 }; 
+        public static string[] LilySlimeWeak = { "Slash", "Stab" , "Water" ,"Lightning"};
+        public static double[] LilySlimeWeakEffect = { 2.0, 0.5, 0.5, 2.0 }; 
+        public static string[] KingSlimeWeak = { "Slash", "Stab" , "Holy"};
+        public static double[] KingSlimeWeakEffect = { 2.0, 0.5, 0.5};
+
+
+
+
+
         Player Player1 = new Player();
-       public static  Enemy Slime = new Enemy(1, "Slime", "A very weak monster.  Very bouncy too.", "Enemy-Slime",25, Bounce, Tackle, 1, 15, "Minion");
-        public static Enemy LavaSlime = new Enemy(1, "Lava Slime", "A slime made of lava.  Do not try to bounce off them.","Enemy-LavaSlime", 33, Bounce, LavaBurst, 2, 25, "Minion");
-        public static Enemy SnowSlime = new Enemy(1, "Snow Slime", "A slime made of snow and ice.  It's insides are said to be colder than the arctic.","Enemy-SnowSlime", 29, Bounce, SnowBall, 2, 25, "Minion");
-        public static Enemy LilySlime = new Enemy(1, "Lily Slime", "A strange slime that lives under the water.","Enemy-LilySlime", 15, Bounce, WaterTrap, 3, 35, "Minion");
-        public static Enemy KingSlime = new Enemy(1, "The King of Slimes", "The King of Slimes is said to be the forefather of all other slimes", "Enemy-KingSlime",100, SlimeSlam, Bounce, 5, 55, "Boss");
+       public static  Enemy Slime = new Enemy(1, "Slime", "A very weak monster.  Very bouncy too.", "Enemy-Slime",25, Bounce, Tackle, 1, 15, "Minion", SlimeWeak, SlimeWeakEffect);
+        public static Enemy LavaSlime = new Enemy(1, "Lava Slime", "A slime made of lava.  Do not try to bounce off them.","Enemy-LavaSlime", 33, Bounce, LavaBurst, 2, 25, "Minion", LavaSlimeWeak, LavaSlimeWeakEffect);
+        public static Enemy SnowSlime = new Enemy(1, "Snow Slime", "A slime made of snow and ice.  It's insides are said to be colder than the arctic.","Enemy-SnowSlime", 29, Bounce, SnowBall, 2, 25, "Minion", SnowSlimeWeak, SnowSlimeWeakEffect);
+        public static Enemy LilySlime = new Enemy(1, "Lily Slime", "A strange slime that lives under the water.","Enemy-LilySlime", 15, Bounce, WaterTrap, 3, 35, "Minion", LilySlimeWeak, LilySlimeWeakEffect);
+        public static Enemy KingSlime = new Enemy(1, "The King of Slimes", "The King of Slimes is said to be the forefather of all other slimes", "Enemy-KingSlime",100, SlimeSlam, Bounce, 5, 55, "Boss", KingSlimeWeak, KingSlimeWeakEffect);
         Tower SlimeTower = new("The Slime Tower", "This tower seems to be covered in green slime.  Expect a gooey fight.", Slime, LavaSlime, SnowSlime, LilySlime, KingSlime);
 
 
@@ -117,18 +134,37 @@ namespace TheGame
 
         public void PlayerAttack()
         {
-            txtActionDisplay.Text = Player1.PlayerName + " attacked " + EnemyList[0].EnemyName + " with " + Player1.PlayerWeapon.WeaponName + " dealing " + Player1.PlayerWeapon.WeaponDamage.ToString() + " damage.\n";
+            double[] attackMultiplier = Player1.AttackMelee(EnemyList[0]);
+            double playerDamageP = Player1.PlayerWeapon.WeaponPDamage * attackMultiplier[0];
+            double playerDamageS = Player1.PlayerWeapon.WeaponSDamage * attackMultiplier[1];
 
-            Player1.PlayerCurrentStamina -= Player1.PlayerWeapon.SPCost;
-            lblPlayerSP.Content = "SP: " + Player1.PlayerCurrentStamina.ToString();
-            EnemyList[0].EnemyHealth -= Player1.PlayerWeapon.WeaponDamage;
-            lblEnemyHP.Content = "HP: " + EnemyList[0].EnemyHealth.ToString();
+            if (Player1.PlayerWeapon.WeaponSDamageType == "")
+            {
+                txtActionDisplay.Text = Player1.PlayerName + " attacked " + EnemyList[0].EnemyName + " with " + Player1.PlayerWeapon.WeaponName + " dealing " + playerDamageP.ToString() + " " + Player1.PlayerWeapon.WeaponPDamageType +" damage.\n";
+                Player1.PlayerCurrentStamina -= Player1.PlayerWeapon.SPCost;
+                lblPlayerSP.Content = "SP: " + Player1.PlayerCurrentStamina.ToString();
+                EnemyList[0].EnemyHealth -= playerDamageP;
+                lblEnemyHP.Content = "HP: " + EnemyList[0].EnemyHealth.ToString();
+            }
+            else
+            {
+                txtActionDisplay.Text = Player1.PlayerName + " attacked " + EnemyList[0].EnemyName + " with " + Player1.PlayerWeapon.WeaponName + " dealing " + playerDamageP.ToString() + " " + Player1.PlayerWeapon.WeaponPDamageType + " damage.\n" +
+                    "and " + playerDamageS.ToString() + " " + Player1.PlayerWeapon.WeaponSDamageType + " damage.\n";
+                Player1.PlayerCurrentStamina -= Player1.PlayerWeapon.SPCost;
+                lblPlayerSP.Content = "SP: " + Player1.PlayerCurrentStamina.ToString();
+                EnemyList[0].EnemyHealth -= playerDamageP;
+                lblEnemyHP.Content = "HP: " + EnemyList[0].EnemyHealth.ToString();
+            }
+
 
         }
         public void PlayerAttackWand()
         {
+            double attackMultiplier = Player1.AttackWand(EnemyList[0]);
+            double playerDamage = Player1.PlayerWand.WandDamage * attackMultiplier;
 
-            txtActionDisplay.Text = Player1.PlayerName + " attacked " + EnemyList[0].EnemyName + " with " + Player1.PlayerWand.WandName + " dealing " + Player1.PlayerWand.WandDamage.ToString() + " damage.\n";
+
+            txtActionDisplay.Text = Player1.PlayerName + " attacked " + EnemyList[0].EnemyName + " with " + Player1.PlayerWand.WandName + " dealing " + playerDamage.ToString() +" " + Player1.PlayerWand.WandDamageType+ " damage.\n";
 
             Player1.PlayerCurrentStamina -= Player1.PlayerWand.SPCost;
             Player1.PlayerCurrentMana -= Player1.PlayerWand.MPCost;
@@ -136,7 +172,7 @@ namespace TheGame
             lblPlayerSP.Content = "SP: " + Player1.PlayerCurrentStamina.ToString();
             lblPlayerMP.Content = "MP: " + Player1.PlayerCurrentMana.ToString();
 
-            EnemyList[0].EnemyHealth -= Player1.PlayerWand.WandDamage;
+            EnemyList[0].EnemyHealth -= playerDamage;
             lblEnemyHP.Content = "HP: " + EnemyList[0].EnemyHealth.ToString();
 
         }
@@ -146,20 +182,20 @@ namespace TheGame
             EnemyAttack(1);
         }
 
-        public void EnemyAttack(int powerMuliply)
+        public void EnemyAttack(double powerMuliply)
         {
             Random rd = new Random();
 
-            int rand_num = rd.Next(1, 3);
+            double rand_num = rd.Next(1, 3);
 
             if (rand_num == 1){
-                txtActionDisplay.Text += EnemyList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + EnemyList[0].Attack1.EnemyAttackName + " dealing " + EnemyList[0].Attack1.EnemyAttackDamage.ToString() + " damage.";
+                txtActionDisplay.Text += EnemyList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + EnemyList[0].Attack1.EnemyAttackName + " dealing " + (EnemyList[0].Attack1.EnemyAttackDamage * powerMuliply).ToString() + " damage.";
                 Player1.PlayerCurrentHealth -= EnemyList[0].Attack1.EnemyAttackDamage * powerMuliply;
 
             }
             else
             {
-                txtActionDisplay.Text += EnemyList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + EnemyList[0].Attack2.EnemyAttackName + " dealing " + EnemyList[0].Attack2.EnemyAttackDamage.ToString() + " damage.";
+                txtActionDisplay.Text += EnemyList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + EnemyList[0].Attack2.EnemyAttackName + " dealing " + (EnemyList[0].Attack2.EnemyAttackDamage* powerMuliply).ToString() + " damage.";
                 Player1.PlayerCurrentHealth -= EnemyList[0].Attack2.EnemyAttackDamage * powerMuliply;
 
             }
@@ -268,9 +304,11 @@ namespace TheGame
 
         private void btnRest_Click(object sender, RoutedEventArgs e)
         {
-            Player1.PlayerCurrentStamina += (Player1.PlayerStamina/2);
-            Player1.PlayerCurrentMana += (Player1.PlayerMana/2);
-            EnemyAttack(2);
+            Player1.PlayerCurrentStamina += (Player1.PlayerStamina/1.5);
+            Player1.PlayerCurrentMana += (Player1.PlayerMana/1.5);
+            txtActionDisplay.Text += Player1.PlayerName + " took a rest to recover their stamina and mana, leaving themselves open to attack! \n";
+
+            EnemyAttack(1.5);
             RefreshScreen();
         }
     }

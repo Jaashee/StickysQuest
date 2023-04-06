@@ -9,17 +9,18 @@ namespace TheGame
 {
     public class Enemy
     {
-        public int EnemyId { get; set; }
+        public double EnemyId { get; set; }
         public string EnemyName { get; set; }
         public string EnemyDesc { get; set; }
         public BitmapImage EnemyImage { get; set; }
-        public int EnemyHealth { get; set; }
+        public double EnemyHealth { get; set; }
         public Enemy_Attack Attack1 { get; set; }
         public Enemy_Attack Attack2 { get; set; }
-        public int EnemyLevel { get; set; }
-        public int EnemyXP { get; set; }
+        public double EnemyLevel { get; set; }
+        public double EnemyXP { get; set; }
         public string EnemyType { get; set; }
-
+        public string[] EnemyWeakness {get; set;}
+        public double[] EnemyWeaknessEffect { get; set; }
 
         public Enemy()
         {
@@ -34,7 +35,7 @@ namespace TheGame
             this.EnemyXP = 15;
             this.EnemyType = "minion";*/
         }
-        public Enemy(int EnemyId, string EnemyName, string EnemyDesc, string EnemyImage,int EnemyHealth, Enemy_Attack Attack1, Enemy_Attack Attack2, int EnemyLevel, int EnemyXP, string EnemyType)
+        public Enemy(int EnemyId, string EnemyName, string EnemyDesc, string EnemyImage,int EnemyHealth, Enemy_Attack Attack1, Enemy_Attack Attack2, double EnemyLevel, double EnemyXP, string EnemyType, string[] EnemyWeakness, double[] EnemyWeaknessEffect)
         {
             this.EnemyId = EnemyId;
             this.EnemyName = EnemyName;
@@ -46,11 +47,12 @@ namespace TheGame
             this.EnemyLevel = EnemyLevel;
             this.EnemyXP = EnemyXP;
             this.EnemyType = EnemyType;
-
+            this.EnemyWeakness = EnemyWeakness;
+            this.EnemyWeaknessEffect = EnemyWeaknessEffect;
 
         }
 
-        public Enemy(int EnemyId, string EnemyName, string EnemyDesc, string  enemyImage, int EnemyHealth, int EnemyLevel, int EnemyXP, string EnemyType)
+        public Enemy(int EnemyId, string EnemyName, string EnemyDesc, string  enemyImage, double EnemyHealth, double EnemyLevel, double EnemyXP, string EnemyType, List<string> EnemyWeakness, List<double> EnemyWeaknessEffect)
         {
             this.EnemyId = EnemyId;
             this.EnemyName = EnemyName;

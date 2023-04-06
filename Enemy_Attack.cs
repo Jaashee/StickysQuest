@@ -8,10 +8,10 @@ namespace TheGame
 {
     public class Enemy_Attack
     {
-        public int EnemyAttackID { get; set; }
+        public double EnemyAttackID { get; set; }
         public string EnemyAttackName { get; set; }
         public string EnemyAttackDesc { get; set; }
-        public int EnemyAttackDamage { get; set; }
+        public double EnemyAttackDamage { get; set; }
 
 
 
@@ -25,7 +25,7 @@ namespace TheGame
             this.EnemyAttackDamage = 10;
         }
 
-        public Enemy_Attack(int EnemyAttackID, string EnemyAttackName, string EnemyAttackDesc, int EnemyAttackDamage)
+        public Enemy_Attack(int EnemyAttackID, string EnemyAttackName, string EnemyAttackDesc, double EnemyAttackDamage)
         {
             this.EnemyAttackID = EnemyAttackID;
             this.EnemyAttackName = EnemyAttackName;

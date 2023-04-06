@@ -13,9 +13,12 @@ namespace TheGame
         public string WeaponDesc { get; set; }
         public BitmapImage WeaponImage { get; set; }
         public BitmapImage WeaponSprite { get; set; }
+        public string WeaponPDamageType { get; set; }
+        public double WeaponPDamage { get; set; }
+        public string WeaponSDamageType { get; set; }
+        public double WeaponSDamage { get; set; }
 
-        public int WeaponDamage { get; set; }
-        public int SPCost { get; set; }
+        public double SPCost { get; set; }
 
 
         public Weapon()
@@ -29,14 +32,17 @@ namespace TheGame
 
         }
 
-        public Weapon(string WeaponName, string WeaponDesc, string WeaponImage, string WeaponSprite, int WeaponDamage, int SPCost)
+        public Weapon(string WeaponName, string WeaponDesc, string WeaponImage, string WeaponSprite, string WeaponPDamageType, double WeaponPDamage, string WeaponSDamageType, double WeaponSDamage, double SPCost)
         {
             this.WeaponName = WeaponName;
             this.WeaponDesc = WeaponDesc;
             this.WeaponImage = new BitmapImage(new Uri("Images/" + WeaponImage + ".png", UriKind.Relative)); 
             this.WeaponSprite = new BitmapImage(new Uri("Images/" + WeaponSprite + ".png", UriKind.Relative));
+            this.WeaponPDamageType = WeaponPDamageType;
+            this.WeaponPDamage = WeaponPDamage;
+            this.WeaponSDamageType = WeaponSDamageType;
+            this.WeaponSDamage = WeaponSDamage;
 
-            this.WeaponDamage = WeaponDamage;
             this.SPCost = SPCost;
 
 

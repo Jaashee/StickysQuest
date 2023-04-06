@@ -20,8 +20,8 @@ namespace TheGame
     /// </summary>
     public partial class CreateCharacter : Page
     {
-        public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", "Weapon-Dagger","Sprite-Dagger", 15, 10);
-        public static Wand MagicWand = new Wand("MagicWand", "The standard magical instrument", "Weapon-MagicWand", "Sprite-MagicWand", 25, 10, 25);
+        public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", "Weapon-Dagger","Sprite-Dagger", "Stab", 15, "", 0, 10);
+        public static Wand MagicWand = new Wand("MagicWand", "The standard magical instrument", "Weapon-MagicWand", "Sprite-MagicWand", "Holy", 25, 10, 25);
         public static Potion RedPotion = new Potion("Red Potion", "Heals 50 hp","Sprite-RedPotion" ,"100500");
         Player Player1 = new Player("Player", "Player-Black", "Hat-None", 100, 100, 100, 1, 0, Dagger, MagicWand, RedPotion);
 
