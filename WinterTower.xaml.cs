@@ -24,8 +24,13 @@ namespace TheGame
     public partial class WinterTower : Page
     {
     
-        public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", "Weapon-Dagger", "Sprite-Dagger", "Stab", 15, "", 0, 10);
-        public static Wand MagicWand = new Wand("MagicWand", "The standard magical instrument", "Weapon-MagicWand", "Sprite-MagicWand", "Holy", 25, 10, 25);
+        public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", "Weapon-Dagger", "Sprite-Dagger", "Stab", 10, "", 0, 5);
+        public static Weapon BattleAxe = new Weapon("Battle Axe", "A standard battle axe", "Weapon-BattleAxe", "Sprite-BattleAxe", "Slash", 25, "", 0, 20);
+        public static Weapon VolcanoAxe = new Weapon("Volcano Axe", "A legendary battle axe forged in the heart of a volcano", "Weapon-VolcanoAxe", "Sprite-VolcanoAxe", "Slash", 20, "Fire", 10, 25);
+
+        public static Wand MagicWand = new Wand("Magic Wand", "The standard magical instrument", "Weapon-MagicWand", "Sprite-MagicWand", "Holy", 25, 10, 25);
+        public static Wand CrystalWand = new Wand("Crystal Wand", "A wand carefully crafted of magic crystal", "Weapon-CrystalWand", "Sprite-CrystalWand", "Magic", 25, 10, 25);
+        public static Wand EvilEyeScepter = new Wand("Evil Eye Scepter", "The eye of an evil cyclops has been attached to a scepter", "Weapon-EvilEyeScepter", "Sprite-EvilEyeScepter", "Fire", 25, 10, 25);
         public static Potion RedPotion = new Potion("Red Potion", "Heals 50 hp", "Sprite-RedPotion", "100500");
         public static Enemy_Attack Bounce = new(1, "Bounce", "The enemy bounces high and lands on you!", 10);
         public static Enemy_Attack Tackle = new(2, "Tackle", "The enemy tackles you!", 15);
@@ -33,29 +38,57 @@ namespace TheGame
         public static Enemy_Attack SnowBall = new(4, "Snow Ball", "The enemy throws a snow ball at you!", 10);
         public static Enemy_Attack SlimeSlam = new(5, "Slime Slam", "The enemy slime bounces incredibly high and lands with thunderous impact!", 30);
         public static Enemy_Attack LavaBurst = new(6, "Lava Burst", "The enemy bursts a lava bubble!", 20);
+        public static Enemy_Attack GoneFishing = new(7, "Gone Fishing", "The enemy hooks you with their fishing rod!", 15);
+        public static Enemy_Attack PolarStorm = new(7, "Polar Storm", "The enemy summons the cold winds of ancient winter!", 30);
+        public static Enemy_Attack WinterDance = new(8, "Winter Dance", "The enemy dances and summons a blizzard!", 25);
 
 
         public static string[] SlimeWeak = { "Slash","Stab" };
         public static double[] SlimeWeakEffect = { 2.0, 0.5 };
         public static string[] LavaSlimeWeak = { "Slash", "Stab" ,"Water"};
         public static double[] LavaSlimeWeakEffect = { 2.0, 0.5 ,2.0}; 
-        public static string[] SnowSlimeWeak = { "Slash", "Stab","Smash","Water" };
+        public static string[] SnowSlimeWeak = { "Slash", "Stab","Smash","Fire" };
         public static double[] SnowSlimeWeakEffect = { 2.0, 0.5, 2.0, 2.0 }; 
         public static string[] LilySlimeWeak = { "Slash", "Stab" , "Water" ,"Lightning"};
-        public static double[] LilySlimeWeakEffect = { 2.0, 0.5, 0.5, 2.0 }; 
-        public static string[] KingSlimeWeak = { "Slash", "Stab" , "Holy"};
-        public static double[] KingSlimeWeakEffect = { 2.0, 0.5, 0.5};
+        public static double[] LilySlimeWeakEffect = { 2.0, 0.5, 0.5, 2.0 };
+        public static string[] SantaSlimeWeak = { "Slash", "Stab", "Smash", "Fire", "Holy", "Magic" };
+        public static double[] SantaSlimeWeakEffect = { 2.0, 0.5, 2.0, 2.0 , 0.5, 2.0};
+        public static string[] KingSlimeWeak = { "Slash", "Stab" , "Magic", "Holy"};
+        public static double[] KingSlimeWeakEffect = { 2.0, 0.5, 2.0,  0.5};
 
 
+        public static string[] IceFishingWeak = { "Water", "Ice", "Fire" };
+        public static double[] IceFishingEffect = { 0.5, 0.5, 2.0 };
+        public static string[] LavaFishingWeak = { "Water", "Ice", "Fire" };
+        public static double[] LavaFishingEffect = { 2.0, 0.5, 0.5 };
 
+        public static string[] IceGolemWeak = { "Stab","Smash", "Water", "Ice", "Fire" };
+        public static double[] IceGolemEffect = { 0.5, 2.0, 0.5, 0.5, 2.0 };
 
+        public static string[] SnowflakeWeak = { "Smash", "Water", "Ice", "Fire" };
+        public static double[] SnowflakeEffect = { 2.0, 0.5, 0.5, 2.0 };
+
+        public static string[] PolarBeastWeak = { "Stab","Slice", "Water", "Ice", "Fire" };
+        public static double[] PolarBeastEffect = { 2.0, 0.5, 0.5, 0.5, 2.0 };
+
+        public static string[] SnowMiserWeak = { "Water", "Ice", "Fire", "Holy", "Magic" };
+        public static double[] SnowMiserEffect = { 0.5, 0.5, 2.0, 0.5, 2.0 };
 
         Player Player1 = new Player();
-       public static  Enemy Slime = new Enemy(1, "Slime", "A very weak monster.  Very bouncy too.", "Enemy-Slime",25, Bounce, Tackle, 1, 15, "Minion", SlimeWeak, SlimeWeakEffect);
+        public static Enemy IceFishing = new Enemy(1, "Ice Fisher", "A regular guy, he is ice fishing.", "Enemy-IceFishing", 30, SnowBall, GoneFishing, 1, 15, "Minion", IceFishingWeak, IceFishingEffect);
+        public static Enemy LavaFishing = new Enemy(1, "Lava Fisher", "A regular guy, for some reason he is fishing in lava.", "Enemy-LavaFishing", 25, LavaBurst, GoneFishing, 1, 25, "Minion", LavaFishingWeak, LavaFishingEffect);
+        public static Enemy IceGolem = new Enemy(1, "Ice Golem", "A strange creature made of ice colder than normal", "Enemy-IceGolem", 50, SnowBall, Tackle, 1, 25, "Minion", IceGolemWeak, IceGolemEffect);
+        public static Enemy Snowflake = new Enemy(1, "Mishapen Snowflake", "A colossal snowflake that does not look happy", "Enemy-SnowFlake", 30, SnowBall, PolarStorm, 1, 40, "Minion", SnowflakeWeak, SnowflakeEffect);
+        public static Enemy PolarBeast = new Enemy(1, "Polar Beast", "A creature that typically lives high in the northern arctic", "Enemy-PolarBeast", 25, Tackle, SnowBall, 1, 15, "Minion", PolarBeastWeak, PolarBeastEffect);
+        public static Enemy SnowMiser = new Enemy(1, "Snow Miser", "The king of winter.", "Enemy-SnowMiser", 45, PolarStorm, WinterDance, 5, 55, "Boss", SnowMiserWeak, SnowMiserEffect);
+
+        public static  Enemy Slime = new Enemy(1, "Slime", "A very weak monster.  Very bouncy too.", "Enemy-Slime",25, Bounce, Tackle, 1, 15, "Minion", SlimeWeak, SlimeWeakEffect);
         public static Enemy LavaSlime = new Enemy(1, "Lava Slime", "A slime made of lava.  Do not try to bounce off them.","Enemy-LavaSlime", 33, Bounce, LavaBurst, 2, 25, "Minion", LavaSlimeWeak, LavaSlimeWeakEffect);
         public static Enemy SnowSlime = new Enemy(1, "Snow Slime", "A slime made of snow and ice.  It's insides are said to be colder than the arctic.","Enemy-SnowSlime", 29, Bounce, SnowBall, 2, 25, "Minion", SnowSlimeWeak, SnowSlimeWeakEffect);
         public static Enemy LilySlime = new Enemy(1, "Lily Slime", "A strange slime that lives under the water.","Enemy-LilySlime", 15, Bounce, WaterTrap, 3, 35, "Minion", LilySlimeWeak, LilySlimeWeakEffect);
-        public static Enemy KingSlime = new Enemy(1, "The King of Slimes", "The King of Slimes is said to be the forefather of all other slimes", "Enemy-KingSlime",100, SlimeSlam, Bounce, 5, 55, "Boss", KingSlimeWeak, KingSlimeWeakEffect);
+        public static Enemy KingSlime = new Enemy(1, "The King of Slimes", "The King of Slimes is said to be the forefather of all other slimes", "Enemy-KingSlime",75, SlimeSlam, Bounce, 5, 55, "Boss", KingSlimeWeak, KingSlimeWeakEffect);
+        public static Enemy SantaSlime = new Enemy(1, "Slimeta Clause", "This strange slime delivers presents to all the good slimes every year", "Enemy-SlimeClause", 75, SlimeSlam, SnowBall, 5, 55, "Boss", SantaSlimeWeak, SantaSlimeWeakEffect);
+
         Tower SlimeTower = new("The Slime Tower", "This tower seems to be covered in green slime.  Expect a gooey fight.", Slime, LavaSlime, SnowSlime, LilySlime, KingSlime);
 
 
