@@ -34,5 +34,12 @@ namespace TheGame
 
 
         }
+        public override string ToString()
+        {
+
+            return ("Potion Name: " + this.PotionName + "\n" +
+               this.PotionDesc);
+
+        }
     }
 }

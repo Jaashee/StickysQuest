@@ -39,5 +39,13 @@ namespace TheGame
 
 
         }
+        public override string ToString()
+        {
+
+                return ("Wand Name: " + this.WandName + "\n" +
+                   this.WandDesc + "\n" +
+                   "Deals " + this.WandDamage + " " + this.WandDamageType + " damage");
+            
+        }
     }
 }

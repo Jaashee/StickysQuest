@@ -47,5 +47,22 @@ namespace TheGame
 
 
         }
+        public override string ToString()
+        {
+
+            if (this.WeaponSDamageType == "")
+            {
+                return ("Weapon Name: " + this.WeaponName + "\n" +
+                this.WeaponDesc + "\n" +
+                "Deals " + this.WeaponPDamage + " " + this.WeaponPDamageType + " damage");
+            }
+            else
+            {
+                return ("Weapon Name: " + this.WeaponName + "\n" +
+                   this.WeaponDesc + "\n" +
+                   "Deals " + this.WeaponPDamage + " " + this.WeaponPDamageType + " damage"+ "\n" +
+                   "Deals " + this.WeaponSDamage + " " + this.WeaponSDamageType + " damage");
+            }
+        }
     }
 }
