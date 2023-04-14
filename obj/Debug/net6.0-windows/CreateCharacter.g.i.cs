@@ -93,7 +93,7 @@ namespace TheGame {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TheGame;component/createcharacter.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TheGame;V1.0.0.0;component/createcharacter.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CreateCharacter.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

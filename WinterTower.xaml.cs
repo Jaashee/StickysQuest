@@ -81,9 +81,9 @@ namespace TheGame
         public static Enemy IceFishing = new Enemy(1, "Ice Fisher", "A regular guy, he is ice fishing.", "Enemy-IceFishing", 30, SnowBall, GoneFishing, 1, 15, "Minion", IceFishingWeak, IceFishingEffect);
         public static Enemy LavaFishing = new Enemy(1, "Lava Fisher", "A regular guy, for some reason he is fishing in lava.", "Enemy-LavaFishing", 25, LavaBurst, GoneFishing, 1, 25, "Minion", LavaFishingWeak, LavaFishingEffect);
         public static Enemy IceGolem = new Enemy(1, "Ice Golem", "A strange creature made of ice colder than normal", "Enemy-IceGolem", 50, SnowBall, Tackle, 1, 25, "Minion", IceGolemWeak, IceGolemEffect);
-        public static Enemy Snowflake = new Enemy(1, "Mishapen Snowflake", "A colossal snowflake that does not look happy", "Enemy-SnowFlake", 30, SnowBall, PolarStorm, 1, 40, "Minion", SnowflakeWeak, SnowflakeEffect);
+        public static Enemy Snowflake = new Enemy(1, "Mishapen Snowflake", "A colossal snowflake that does not look happy", "Enemy-MisshapenSnowflake", 30, SnowBall, PolarStorm, 1, 40, "Minion", SnowflakeWeak, SnowflakeEffect);
         public static Enemy PolarBeast = new Enemy(1, "Polar Beast", "A creature that typically lives high in the northern arctic", "Enemy-PolarBeast", 25, Tackle, SnowBall, 1, 15, "Minion", PolarBeastWeak, PolarBeastEffect);
-        public static Enemy SnowMadMan = new Enemy(1, "Snow Mad Man", "The soul of a mad man made form of snow.", "Enemy-SnowMiser", 35, PolarStorm, SnowBall, 1, 35, "Minion", SnowMadManWeak, SnowMadManEffect);
+        public static Enemy SnowMadMan = new Enemy(1, "Snow Mad Man", "The soul of a mad man made form of snow.", "Enemy-SnowMadMan", 35, PolarStorm, SnowBall, 1, 35, "Minion", SnowMadManWeak, SnowMadManEffect);
         public static Enemy SnowMiser = new Enemy(1, "Snow Miser", "The king of winter.", "Enemy-SnowMiser", 45, PolarStorm, WinterDance, 5, 55, "Boss", SnowMiserWeak, SnowMiserEffect);
 
         public static  Enemy Slime = new Enemy(1, "Slime", "A very weak monster.  Very bouncy too.", "Enemy-Slime",25, Bounce, Tackle, 1, 15, "Minion", SlimeWeak, SlimeWeakEffect);
