@@ -25,10 +25,14 @@ namespace TheGame
         public OptionsPage()
         {
             InitializeComponent();
-            BackgroundMs = new MediaPlayer(); // Initialize the BackgroundMs object
+            BackgroundMs = new MediaPlayer();
             BackgroundMs.Open(new Uri("Sounds/Background.wav", UriKind.Relative));
             BackgroundMs.Play();
+
+            // Set the initial volume percentage
+            volumePercentage.Text = $"{(int)(volumeSlider.Value * 100)}%";
         }
+
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
@@ -43,11 +47,17 @@ namespace TheGame
 
         private void volumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (BackgroundMs != null) // Check if BackgroundMs is not null before setting its volume
+            if (BackgroundMs != null)
             {
                 BackgroundMs.Volume = e.NewValue;
             }
-        }
 
+            // Check if volumePercentage is not null before setting its text
+            if (volumePercentage != null)
+            {
+                int percentage = (int)(e.NewValue * 100);
+                volumePercentage.Text = $"{percentage}%";
+            }
+        }
     }
 }
