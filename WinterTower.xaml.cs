@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Channels;
@@ -185,7 +186,17 @@ namespace TheGame
             txtActionDisplay.ScrollToEnd();
         }
 
+        private void WriteDamageToFile(string attacker, string defender, double damage)
+        {
+            // Define file path
+            string filePath = "../../../damageLog.txt";
 
+            // Create or append to file with damage log
+            using (StreamWriter writer = new StreamWriter(filePath, true))
+            {
+                writer.WriteLine($"name: {TowerList[0].EnemyName} date: {DateTime.Now} ---- {attacker} dealt {damage} damage to {defender}.");
+            }
+        }
 
         private void btnAttack_Click(object sender, RoutedEventArgs e)
         {
