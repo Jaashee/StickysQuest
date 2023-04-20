@@ -125,7 +125,7 @@ namespace TheGame
                 }
                 flavourText += " health";
             }
-            if (stamina == 1)
+            if (stamina.ToString() == "1")
             {
                 this.PlayerCurrentStamina = this.PlayerCurrentStamina + amount;
                 if (this.PlayerCurrentStamina > this.PlayerStamina)
@@ -135,7 +135,7 @@ namespace TheGame
                 flavourText += " stamina";
 
             }
-            if (mana == 1)
+            if (mana.ToString() == "1")
             {
                 this.PlayerCurrentMana = this.PlayerCurrentMana + amount;
                 if (this.PlayerCurrentMana > this.PlayerMana)

@@ -75,6 +75,7 @@
             <Rectangle x:Name="Wand" Height="250" Width="250" Fill="Yellow" Canvas.Left="66" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="1"/>
             <Rectangle Name="Hat" Height="250" Width="250" Fill="Yellow" Canvas.Left="66" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="-4"/>
             <Rectangle Name="WinterEnemyRect" Height="250" Width="250" Fill="Yellow" Canvas.Left="612" HorizontalAlignment="Left" Canvas.Top="-4" VerticalAlignment="Top"/>
+            <Label x:Name="lblReward" Content="Enemy defeated!  Choose a reward!" Canvas.Left="370" Canvas.Top="34" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Visibility="Hidden"/>
         </Canvas>
 
         <!-- Action Area -->
@@ -83,6 +84,13 @@
             <Button x:Name="btnAttackWand" Content="Wand" Width="100" Height="50" Click="btnAttackWand_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
             <Button x:Name="btnPotion" Content="Potion" Width="100" Height="50" Click="btnPotion_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
             <Button x:Name="btnRest" Content="Rest" Width="100" Height="50" Click="btnRest_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
+        </WrapPanel>
+
+        <WrapPanel x:Name="wrpNewEquip" Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="51,72,314,0" Grid.ColumnSpan="2" Visibility="Hidden">
+            <Button Name="btnNewWeap" Content="" Width="100" Height="50" Click="btnNewWeap_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
+            <Button x:Name="btnNewWand" Content="" Width="100" Height="50" Click="btnNewWand_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
+            <Button x:Name="btnNewPotion" Content="" Width="100" Height="50" Click="btnNewPotion_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
+            <Button x:Name="btnKeep" Content="Keep Equipment" Width="100" Height="50" Click="btnKeep_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}" FontSize="10"/>
         </WrapPanel>
 
         <!-- Text Area -->

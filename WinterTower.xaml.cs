@@ -111,15 +111,16 @@ namespace TheGame
         List<Enemy> TowerList = new List<Enemy>();
         List <Weapon> WeaponList = new List<Weapon>();
         List <Wand> WandList = new List<Wand>();
-        
+        List<Potion> PotionList = new List<Potion>();
+        private static Random rng = new Random();
+
 
         public WinterTower(Player CurrentPlayer, double difficultyMultiplier)
         {
             InitializeComponent();
             FightCanvas.Focus();
 
-
-            List<Enemy> EnemyList = new List<Enemy>()
+        List<Enemy> EnemyList = new List<Enemy>()
             {
                 IceFishing, LavaFishing, IceGolem, Snowflake, PolarBeast, SnowMadMan, Slime, LavaSlime, SnowSlime, LilySlime
             };
@@ -149,9 +150,12 @@ namespace TheGame
 
             Player1 = CurrentPlayer;
 
-            WeaponList.Add(Dagger);
+            WeaponList.Add(Dagger); WeaponList.Add(Icicle); WeaponList.Add(ShortSword); WeaponList.Add(BattleAxe); WeaponList.Add(VolcanoAxe);
 
-            WandList.Add(MagicWand);
+            WandList.Add(MagicWand); WandList.Add(CrystalWand); WandList.Add(EvilEyeScepter); WandList.Add(BoneWand);
+
+            PotionList.Add(RedPotion); PotionList.Add(BluePotion); PotionList.Add(GreenPotion); PotionList.Add(PurplePotion); PotionList.Add(MustardPotion); PotionList.Add(CyanPotion);
+
 
             RefreshScreen();
 
@@ -194,7 +198,7 @@ namespace TheGame
                 lblScore.Content = "Score : " + Player1.PlayerScore.ToString();
 
                 AddPlayerActionText( Player1.PlayerName + " defeated " + TowerList[0].EnemyName + " earning " + TowerList[0].EnemyXP.ToString() + " score points!");
-                EnemyRespawn();
+                newEquipment();
 
             }
 
@@ -213,7 +217,7 @@ namespace TheGame
                 lblScore.Content = "Score : " + Player1.PlayerScore.ToString();
 
                 AddPlayerActionText(Player1.PlayerName + " defeated " + TowerList[0].EnemyName + " earning " + TowerList[0].EnemyXP.ToString() + " score points!");
-                EnemyRespawn();
+                newEquipment();
 
 
             }
@@ -306,7 +310,37 @@ namespace TheGame
             this.NavigationService.Navigate(new Results(Player1, TowerList[0],false));
 
         }
+        public void newEquipment()
+        {
+            wrpNewEquip.Visibility = Visibility.Visible;
+            WinterEnemyRect.Visibility = Visibility.Hidden;
+            lblReward.Visibility = Visibility.Visible;
 
+            btnRest.IsEnabled = false;
+            btnAttack.IsEnabled = false;
+            btnPotion.IsEnabled = false;
+            btnAttackWand.IsEnabled = false;
+
+            PotionList = Randomize(PotionList);
+            WeaponList = Randomize(WeaponList);
+            WandList = Randomize(WandList);
+
+            ImageBrush NewWeaponSprite = new ImageBrush();
+            NewWeaponSprite.ImageSource = WeaponList[0].WeaponSprite;
+            btnNewWeap.Background = NewWeaponSprite;
+            btnNewWeap.ToolTip = WeaponList[0].ToString();
+
+            ImageBrush NewWandSprite = new ImageBrush();
+            NewWandSprite.ImageSource = WandList[0].WandSprite;
+            btnNewWand.Background = NewWandSprite;
+            btnNewWand.ToolTip = WandList[0].ToString();
+
+            ImageBrush NewPotionSprite = new ImageBrush();
+            NewPotionSprite.ImageSource = PotionList[0].PotionImage;
+            btnNewPotion.Background = NewPotionSprite;
+            btnNewPotion.ToolTip = PotionList[0].ToString();
+
+        }
         public void EnemyRespawn()
         {
             if (TowerList.Count == 1)
@@ -317,6 +351,15 @@ namespace TheGame
             }
             else
             {
+                wrpNewEquip.Visibility = Visibility.Hidden;
+                WinterEnemyRect.Visibility = Visibility.Visible;
+                lblReward.Visibility = Visibility.Hidden;
+
+                btnRest.IsEnabled = true;
+                btnAttack.IsEnabled = true;
+                btnPotion.IsEnabled = true;
+                btnAttackWand.IsEnabled = true;
+
                 TowerList.RemoveAt(0);
 
                 RefreshScreen();
@@ -408,6 +451,19 @@ namespace TheGame
             EnemyAttack(1.5);
             RefreshScreen();
         }
+
+        public static List<T> Randomize<T>(List<T> list)
+        {
+            List<T> randomizedList = new List<T>();
+            Random rnd = new Random();
+            while (list.Count > 0)
+            {
+                int index = rnd.Next(0, list.Count); //pick a random item from the master list
+                randomizedList.Add(list[index]); //place it at the end of the randomized list
+                list.RemoveAt(index);
+            }
+            return randomizedList;
+        }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             if (this.IsLoaded) // Check if the page is loaded
@@ -443,5 +499,27 @@ namespace TheGame
             }
         }
 
+        private void btnNewWeap_Click(object sender, RoutedEventArgs e)
+        {
+            Player1.PlayerWeapon = WeaponList[0];
+            EnemyRespawn();
+        }
+
+        private void btnNewWand_Click(object sender, RoutedEventArgs e)
+        {
+            Player1.PlayerWand = WandList[0];
+            EnemyRespawn();
+        }
+
+        private void btnNewPotion_Click(object sender, RoutedEventArgs e)
+        {
+            Player1.PlayerPotion = PotionList[0];
+            EnemyRespawn();
+        }
+
+        private void btnKeep_Click(object sender, RoutedEventArgs e)
+        {
+            EnemyRespawn();
+        }
     }
 }
