@@ -30,7 +30,8 @@
         </Grid.Resources>
         <TextBlock Text="Options" FontSize="48" FontWeight="Bold" Foreground="#1E88E5" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" />
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <!-- Add any option controls here -->
+            <TextBlock Text="Volume" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10" />
+            <Slider x:Name="volumeSlider" Minimum="0" Maximum="1" Value="1" LargeChange="0.1" SmallChange="0.01" TickFrequency="0.1" IsSnapToTickEnabled="True" Orientation="Horizontal" Width="200" Margin="0,0,0,20" ValueChanged="volumeSlider_ValueChanged"/>
         </StackPanel>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="20,0,0,20" VerticalAlignment="Bottom" Click="btnBack_Click" Style="{StaticResource RoundedButton}" />
         <Button x:Name="btnQuit" Content="Quit" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" Click="btnQuit_Click" Style="{StaticResource RoundedButton}" />

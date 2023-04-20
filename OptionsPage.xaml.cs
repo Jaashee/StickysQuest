@@ -20,10 +20,14 @@ namespace TheGame
     /// </summary>
     public partial class OptionsPage : Page
     {
+        private MediaPlayer BackgroundMs; // Declare BackgroundMs as a class-level variable
+
         public OptionsPage()
         {
             InitializeComponent();
-            
+            BackgroundMs = new MediaPlayer(); // Initialize the BackgroundMs object
+            BackgroundMs.Open(new Uri("Sounds/Background.wav", UriKind.Relative));
+            BackgroundMs.Play();
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -36,5 +40,14 @@ namespace TheGame
             Application.Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
             Application.Current.Shutdown();
         }
+
+        private void volumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (BackgroundMs != null) // Check if BackgroundMs is not null before setting its volume
+            {
+                BackgroundMs.Volume = e.NewValue;
+            }
+        }
+
     }
 }
