@@ -48,23 +48,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jasha\\.nuget\\packages\\": {},
+    "C:\\Users\\r12d1\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jasha\\source\\repos\\TheGame\\TheGame.csproj",
+      "projectUniqueName": "C:\\Users\\r12d1\\source\\repos\\The_Game\\TheGame.csproj",
       "projectName": "TheGame",
-      "projectPath": "C:\\Users\\jasha\\source\\repos\\TheGame\\TheGame.csproj",
-      "packagesPath": "C:\\Users\\jasha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jasha\\source\\repos\\TheGame\\obj\\",
+      "projectPath": "C:\\Users\\r12d1\\source\\repos\\The_Game\\TheGame.csproj",
+      "packagesPath": "C:\\Users\\r12d1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\r12d1\\source\\repos\\The_Game\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\jasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\r12d1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\MicroFocus.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -118,7 +118,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

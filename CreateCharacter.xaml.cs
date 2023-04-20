@@ -20,6 +20,8 @@ namespace TheGame
     /// </summary>
     public partial class CreateCharacter : Page
     {
+        double difficultyMultplier = 0.5;
+
         public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", "Weapon-Dagger","Sprite-Dagger", "Stab", 15, "", 0, 10);
         public static Wand MagicWand = new Wand("MagicWand", "The standard magical instrument", "Weapon-MagicWand", "Sprite-MagicWand", "Holy", 25, 10, 25);
         public static Potion RedPotion = new Potion("Red Potion", "Heals 50 hp","Sprite-RedPotion" ,"100500");
@@ -45,7 +47,7 @@ namespace TheGame
 
             if (Player1.PlayerName == PlayernName)
             {
-                this.NavigationService.Navigate(new WinterTower(Player1));
+                this.NavigationService.Navigate(new WinterTower(Player1, difficultyMultplier));
 
             }
         }
@@ -70,11 +72,35 @@ namespace TheGame
             {
                 Player1.ChangeColour("Player-Blue");
             }
+            else if (cmboColour.SelectedIndex == 5)
+            {
+                Player1.ChangeColour("Player-Cyan");
+            }
+            else if (cmboColour.SelectedIndex == 6)
+            {
+                Player1.ChangeColour("Player-White");
+            }
 
             RefreshScreen();
         }
 
-        private void cmboHat_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void cmboDifficulty_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cmboColour.SelectedIndex == 0)
+            {
+                difficultyMultplier = 0.5;
+            }
+            else if (cmboColour.SelectedIndex == 1)
+            {
+                difficultyMultplier = 1;
+            }
+            else if (cmboColour.SelectedIndex == 2)
+            {
+                difficultyMultplier = 1.5;
+            }
+        }
+
+            private void cmboHat_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cmboHat.SelectedIndex == 0)
             {

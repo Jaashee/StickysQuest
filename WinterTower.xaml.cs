@@ -25,13 +25,27 @@ namespace TheGame
     {
     
         public static Weapon Dagger = new Weapon("Dagger", "Short, but gets to the point", "Weapon-Dagger", "Sprite-Dagger", "Stab", 10, "", 0, 5);
+        public static Weapon Icicle = new Weapon("Icicle", "The perfect murder weapon", "Weapon-Icicle", "Sprite-Icicle", "Stab", 7, "Ice", 5, 10);
+        public static Weapon ShortSword = new Weapon("Short Sword", "A short but strong blade.  Good for close quarters.", "Weapon-ShortSword", "Sprite-ShortSword", "Slash", 15, "", 0, 15);
+
         public static Weapon BattleAxe = new Weapon("Battle Axe", "A standard battle axe", "Weapon-BattleAxe", "Sprite-BattleAxe", "Slash", 25, "", 0, 20);
         public static Weapon VolcanoAxe = new Weapon("Volcano Axe", "A legendary battle axe forged in the heart of a volcano", "Weapon-VolcanoAxe", "Sprite-VolcanoAxe", "Slash", 20, "Fire", 10, 25);
 
         public static Wand MagicWand = new Wand("Magic Wand", "The standard magical instrument", "Weapon-MagicWand", "Sprite-MagicWand", "Holy", 25, 10, 25);
+        public static Wand BoneWand = new Wand("Bone Wand", "A peculiar wand constructed of bone", "Weapon-BoneWand", "Sprite-BoneWand", "Death", 25, 10, 25);
+
         public static Wand CrystalWand = new Wand("Crystal Wand", "A wand carefully crafted of magic crystal", "Weapon-CrystalWand", "Sprite-CrystalWand", "Magic", 25, 10, 25);
+        
         public static Wand EvilEyeScepter = new Wand("Evil Eye Scepter", "The eye of an evil cyclops has been attached to a scepter", "Weapon-EvilEyeScepter", "Sprite-EvilEyeScepter", "Fire", 25, 10, 25);
+        
         public static Potion RedPotion = new Potion("Red Potion", "Heals 50 hp", "Sprite-RedPotion", "100500");
+        public static Potion BluePotion = new Potion("Blue Potion", "Heals 75 mp", "Sprite-BluePotion", "001750");
+        public static Potion GreenPotion = new Potion("Green Potion", "Heals 75 sp", "Sprite-GreenPotion", "010750");
+        public static Potion CyanPotion = new Potion("Cyan Potion", "Heals 50 mp and sp", "Sprite-CyanPotion", "011500");
+        public static Potion MustardPotion = new Potion("Mustard Potion", "Heals 30 hp and sp", "Sprite-MustardPotion", "110300");
+        public static Potion PurplePotion = new Potion("Purple Potion", "Heals 30 hp and mp", "Sprite-PurplePotion", "101300");
+
+
         public static Enemy_Attack Bounce = new(1, "Bounce", "The enemy bounces high and lands on you!", 10);
         public static Enemy_Attack Tackle = new(2, "Tackle", "The enemy tackles you!", 15);
         public static Enemy_Attack WaterTrap = new(3, "WaterTrap", "The enemy lures you to the water and drags you under!", 25);
@@ -99,10 +113,12 @@ namespace TheGame
         List <Wand> WandList = new List<Wand>();
         
 
-        public WinterTower(Player CurrentPlayer)
+        public WinterTower(Player CurrentPlayer, double difficultyMultiplier)
         {
             InitializeComponent();
             FightCanvas.Focus();
+
+
             List<Enemy> EnemyList = new List<Enemy>()
             {
                 IceFishing, LavaFishing, IceGolem, Snowflake, PolarBeast, SnowMadMan, Slime, LavaSlime, SnowSlime, LilySlime
@@ -111,6 +127,17 @@ namespace TheGame
             {
             SnowMiser, KingSlime, SantaSlime
             };
+
+            for (var i = 0; i < EnemyList.Count; i++)
+            {
+                Math.Round(EnemyList[i].EnemyHealth *= difficultyMultiplier);
+                Math.Round(EnemyList[i].EnemyXP *= difficultyMultiplier);
+            }
+            for (var i = 0; i < BossList.Count; i++)
+            {
+                Math.Round(EnemyList[i].EnemyHealth *= difficultyMultiplier);
+                Math.Round(EnemyList[i].EnemyXP *= difficultyMultiplier);
+            }
 
             Tower TempTower = new("The Temp Tower", "This tower seems to be covered in green slime.  Expect a gooey fight.", EnemyList, BossList);
 
@@ -282,7 +309,7 @@ namespace TheGame
 
         public void EnemyRespawn()
         {
-            if(TowerList.Count == 1)
+            if (TowerList.Count == 1)
             {
                 //IF YOU KILL AL THE ENEMYIES, THIS HAPPENS
                 this.NavigationService.Navigate(new Results(Player1, TowerList[0], true));
@@ -291,6 +318,7 @@ namespace TheGame
             else
             {
                 TowerList.RemoveAt(0);
+
                 RefreshScreen();
             }
             
@@ -373,8 +401,8 @@ namespace TheGame
 
         private void btnRest_Click(object sender, RoutedEventArgs e)
         {
-            Player1.PlayerCurrentStamina += (Player1.PlayerStamina/1.5);
-            Player1.PlayerCurrentMana += (Player1.PlayerMana/1.5);
+            Player1.PlayerCurrentStamina += Math.Round((Player1.PlayerStamina/1.5));
+            Player1.PlayerCurrentMana += Math.Round((Player1.PlayerMana/1.5));
             AddPlayerActionText(Player1.PlayerName + " took a rest to recover their stamina and mana, leaving themselves open to attack! \n");
 
             EnemyAttack(1.5);
