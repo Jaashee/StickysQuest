@@ -6,7 +6,7 @@
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:TheGame"
         mc:Ignorable="d"
-        Title="The Sound Of Lightning" Height="600" Width="1000"
+        Title="Sticky's Quest" Height="600" Width="1000"
         WindowStartupLocation="CenterScreen" >
 
     <Grid>

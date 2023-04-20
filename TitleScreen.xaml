@@ -29,7 +29,7 @@
             </Style>
         </Grid.Resources>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
-            <TextBlock Text="The Game" FontSize="48" FontWeight="Bold" Foreground="#1E88E5" TextAlignment="Center" />
+            <TextBlock Text="Sticky's Quest" FontSize="48" FontWeight="Bold" Foreground="#1E88E5" TextAlignment="Center" />
             <Button x:Name="btnStart" Content="Begin" Width="200" Click="btnStart_Click" Style="{StaticResource RoundedButton}" Margin="0,20,0,10" />
             <Button x:Name="btnOptions" Content="Options" Width="200" Click="btnOptions_Click" Style="{StaticResource RoundedButton}" Margin="0,10,0,10" />
             <Button x:Name="btnQuit" Content="Quit" Width="200" Click="btnQuit_Click" Style="{StaticResource RoundedButton}" Margin="0,10,0,20" />

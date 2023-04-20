@@ -168,6 +168,8 @@ namespace TheGame
 
         public void AddPlayerActionText(string text)
         {
+
+
             var run = new Run(text) { Foreground = Brushes.Green };
             txtActionDisplayParagraph.Inlines.Add(run);
             txtActionDisplayParagraph.Inlines.Add(new LineBreak());
@@ -197,7 +199,7 @@ namespace TheGame
                 Player1.PlayerScore += TowerList[0].EnemyXP;
                 lblScore.Content = "Score : " + Player1.PlayerScore.ToString();
 
-                AddPlayerActionText( Player1.PlayerName + " defeated " + TowerList[0].EnemyName + " earning " + TowerList[0].EnemyXP.ToString() + " score points!");
+                AddPlayerActionText( Player1.PlayerName + " defeated " + TowerList[0].EnemyName + " earning " + TowerList[0].EnemyXP.ToString() + " score points!\n");
                 newEquipment();
 
             }
@@ -216,7 +218,7 @@ namespace TheGame
                 Player1.PlayerScore += TowerList[0].EnemyXP;
                 lblScore.Content = "Score : " + Player1.PlayerScore.ToString();
 
-                AddPlayerActionText(Player1.PlayerName + " defeated " + TowerList[0].EnemyName + " earning " + TowerList[0].EnemyXP.ToString() + " score points!");
+                AddPlayerActionText(Player1.PlayerName + " defeated " + TowerList[0].EnemyName + " earning " + TowerList[0].EnemyXP.ToString() + " score points!\n");
                 newEquipment();
 
 
@@ -286,13 +288,13 @@ namespace TheGame
             double rand_num = rd.Next(1, 3);
 
             if (rand_num == 1){
-                AddEnemyActionText(TowerList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + TowerList[0].Attack1.EnemyAttackName + " dealing " + (TowerList[0].Attack1.EnemyAttackDamage * powerMuliply).ToString() + " damage.");
+                AddEnemyActionText(TowerList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + TowerList[0].Attack1.EnemyAttackName + " dealing " + (TowerList[0].Attack1.EnemyAttackDamage * powerMuliply).ToString() + " damage. \n");
                 Player1.PlayerCurrentHealth -= TowerList[0].Attack1.EnemyAttackDamage * powerMuliply;
 
             }
             else
             {
-                AddEnemyActionText(TowerList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + TowerList[0].Attack2.EnemyAttackName + " dealing " + (TowerList[0].Attack2.EnemyAttackDamage* powerMuliply).ToString() + " damage.");
+                AddEnemyActionText(TowerList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + TowerList[0].Attack2.EnemyAttackName + " dealing " + (TowerList[0].Attack2.EnemyAttackDamage* powerMuliply).ToString() + " damage. \n");
                 Player1.PlayerCurrentHealth -= TowerList[0].Attack2.EnemyAttackDamage * powerMuliply;
 
             }
@@ -502,18 +504,22 @@ namespace TheGame
         private void btnNewWeap_Click(object sender, RoutedEventArgs e)
         {
             Player1.PlayerWeapon = WeaponList[0];
+            AddPlayerActionText(Player1.PlayerName + " chose a new weapon and got " + Player1.PlayerWeapon.WeaponName + "\n");
+
             EnemyRespawn();
         }
 
         private void btnNewWand_Click(object sender, RoutedEventArgs e)
         {
             Player1.PlayerWand = WandList[0];
+            AddPlayerActionText(Player1.PlayerName + " chose a new wand and got " + Player1.PlayerWand.WandName + "\n");
             EnemyRespawn();
         }
 
         private void btnNewPotion_Click(object sender, RoutedEventArgs e)
         {
             Player1.PlayerPotion = PotionList[0];
+            AddPlayerActionText(Player1.PlayerName + " chose a new potion and got " + Player1.PlayerPotion.PotionName + "\n");
             EnemyRespawn();
         }
 

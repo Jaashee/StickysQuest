@@ -94,8 +94,8 @@
         </WrapPanel>
 
         <!-- Text Area -->
-        <ScrollViewer Grid.Row="2" Grid.Column="1" VerticalScrollBarVisibility="Auto" Margin="4" MinHeight="55" MaxHeight="100" MinWidth="100">
-            <RichTextBox x:Name="txtActionDisplay" IsReadOnly="True" Background="Black" Foreground="White" FontSize="14" FontWeight="Medium" Padding="4" MinWidth="100" Height="118" Width="315">
+        <ScrollViewer Grid.Row="2" Grid.Column="1" VerticalScrollBarVisibility="Auto" Margin="4" MinHeight="55" MaxHeight="150" MinWidth="150" Height="150">
+            <RichTextBox x:Name="txtActionDisplay" IsReadOnly="True" Background="Black" Foreground="White" FontSize="14" FontWeight="Medium" Padding="4" MinWidth="100" Height="150" Width="325" RenderTransformOrigin="0.473,0.432">
                 <FlowDocument>
                     <Paragraph x:Name="txtActionDisplayParagraph"/>
                 </FlowDocument>
