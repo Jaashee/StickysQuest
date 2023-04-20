@@ -20,11 +20,19 @@ namespace TheGame
     /// </summary>
     public partial class OptionsPage : Page
     {
+        private MediaPlayer BackgroundMs; // Declare BackgroundMs as a class-level variable
+
         public OptionsPage()
         {
             InitializeComponent();
-            
+            BackgroundMs = new MediaPlayer();
+            BackgroundMs.Open(new Uri("Sounds/Background.wav", UriKind.Relative));
+            BackgroundMs.Play();
+
+            // Set the initial volume percentage
+            volumePercentage.Text = $"{(int)(volumeSlider.Value * 100)}%";
         }
+
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
@@ -35,6 +43,21 @@ namespace TheGame
         {
             Application.Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
             Application.Current.Shutdown();
+        }
+
+        private void volumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (BackgroundMs != null)
+            {
+                BackgroundMs.Volume = e.NewValue;
+            }
+
+            // Check if volumePercentage is not null before setting its text
+            if (volumePercentage != null)
+            {
+                int percentage = (int)(e.NewValue * 100);
+                volumePercentage.Text = $"{percentage}%";
+            }
         }
     }
 }
