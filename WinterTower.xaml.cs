@@ -132,6 +132,28 @@ namespace TheGame
 
         }
 
+ 
+
+
+        public void AddPlayerActionText(string text)
+        {
+            var run = new Run(text) { Foreground = Brushes.Green };
+            txtActionDisplayParagraph.Inlines.Add(run);
+            txtActionDisplayParagraph.Inlines.Add(new LineBreak());
+            txtActionDisplay.ScrollToEnd();
+
+        }
+
+        public void AddEnemyActionText(string text)
+        {
+            var run = new Run(text) { Foreground = Brushes.Red };
+            txtActionDisplayParagraph.Inlines.Add(run);
+            txtActionDisplayParagraph.Inlines.Add(new LineBreak());
+            txtActionDisplay.ScrollToEnd();
+        }
+
+
+
         private void btnAttack_Click(object sender, RoutedEventArgs e)
         {
             PlayerAttack();
@@ -144,7 +166,7 @@ namespace TheGame
                 Player1.PlayerScore += TowerList[0].EnemyXP;
                 lblScore.Content = "Score : " + Player1.PlayerScore.ToString();
 
-                txtActionDisplay.Text += Player1.PlayerName + " defeated " + TowerList[0].EnemyName + " earning " + TowerList[0].EnemyXP.ToString() + " score points!";
+                AddPlayerActionText( Player1.PlayerName + " defeated " + TowerList[0].EnemyName + " earning " + TowerList[0].EnemyXP.ToString() + " score points!");
                 EnemyRespawn();
 
             }
@@ -163,7 +185,7 @@ namespace TheGame
                 Player1.PlayerScore += TowerList[0].EnemyXP;
                 lblScore.Content = "Score : " + Player1.PlayerScore.ToString();
 
-                txtActionDisplay.Text += Player1.PlayerName + " defeated " + TowerList[0].EnemyName + " earning " + TowerList[0].EnemyXP.ToString() + " score points!";
+                AddPlayerActionText(Player1.PlayerName + " defeated " + TowerList[0].EnemyName + " earning " + TowerList[0].EnemyXP.ToString() + " score points!");
                 EnemyRespawn();
 
 
@@ -184,7 +206,7 @@ namespace TheGame
 
             if (Player1.PlayerWeapon.WeaponSDamageType == "")
             {
-                txtActionDisplay.Text = Player1.PlayerName + " attacked " + TowerList[0].EnemyName + " with " + Player1.PlayerWeapon.WeaponName + " dealing " + playerDamageP.ToString() + " " + Player1.PlayerWeapon.WeaponPDamageType +" damage.\n";
+                AddPlayerActionText(Player1.PlayerName + " attacked " + TowerList[0].EnemyName + " with " + Player1.PlayerWeapon.WeaponName + " dealing " + playerDamageP.ToString() + " " + Player1.PlayerWeapon.WeaponPDamageType +" damage.\n");
                 Player1.PlayerCurrentStamina -= Player1.PlayerWeapon.SPCost;
                 lblPlayerSP.Content = "SP: " + Player1.PlayerCurrentStamina.ToString();
                 TowerList[0].EnemyHealth -= playerDamageP;
@@ -192,8 +214,8 @@ namespace TheGame
             }
             else
             {
-                txtActionDisplay.Text = Player1.PlayerName + " attacked " + TowerList[0].EnemyName + " with " + Player1.PlayerWeapon.WeaponName + " dealing " + playerDamageP.ToString() + " " + Player1.PlayerWeapon.WeaponPDamageType + " damage.\n" +
-                    "and " + playerDamageS.ToString() + " " + Player1.PlayerWeapon.WeaponSDamageType + " damage.\n";
+                AddPlayerActionText(Player1.PlayerName + " attacked " + TowerList[0].EnemyName + " with " + Player1.PlayerWeapon.WeaponName + " dealing " + playerDamageP.ToString() + " " + Player1.PlayerWeapon.WeaponPDamageType + " damage.\n" +
+                    "and " + playerDamageS.ToString() + " " + Player1.PlayerWeapon.WeaponSDamageType + " damage.\n");
                 Player1.PlayerCurrentStamina -= Player1.PlayerWeapon.SPCost;
                 lblPlayerSP.Content = "SP: " + Player1.PlayerCurrentStamina.ToString();
                 TowerList[0].EnemyHealth -= playerDamageP;
@@ -208,7 +230,7 @@ namespace TheGame
             double playerDamage = Player1.PlayerWand.WandDamage * attackMultiplier;
 
 
-            txtActionDisplay.Text = Player1.PlayerName + " attacked " + TowerList[0].EnemyName + " with " + Player1.PlayerWand.WandName + " dealing " + playerDamage.ToString() +" " + Player1.PlayerWand.WandDamageType+ " damage.\n";
+            AddPlayerActionText(Player1.PlayerName + " attacked " + TowerList[0].EnemyName + " with " + Player1.PlayerWand.WandName + " dealing " + playerDamage.ToString() +" " + Player1.PlayerWand.WandDamageType+ " damage.\n");
 
             Player1.PlayerCurrentStamina -= Player1.PlayerWand.SPCost;
             Player1.PlayerCurrentMana -= Player1.PlayerWand.MPCost;
@@ -222,7 +244,7 @@ namespace TheGame
         }
         private void btnPotion_Click(object sender, RoutedEventArgs e)
         {
-            txtActionDisplay.Text = Player1.UsePotion();
+            AddPlayerActionText(Player1.UsePotion());
             EnemyAttack(1);
         }
 
@@ -233,13 +255,13 @@ namespace TheGame
             double rand_num = rd.Next(1, 3);
 
             if (rand_num == 1){
-                txtActionDisplay.Text += TowerList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + TowerList[0].Attack1.EnemyAttackName + " dealing " + (TowerList[0].Attack1.EnemyAttackDamage * powerMuliply).ToString() + " damage.";
+                AddEnemyActionText(TowerList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + TowerList[0].Attack1.EnemyAttackName + " dealing " + (TowerList[0].Attack1.EnemyAttackDamage * powerMuliply).ToString() + " damage.");
                 Player1.PlayerCurrentHealth -= TowerList[0].Attack1.EnemyAttackDamage * powerMuliply;
 
             }
             else
             {
-                txtActionDisplay.Text += TowerList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + TowerList[0].Attack2.EnemyAttackName + " dealing " + (TowerList[0].Attack2.EnemyAttackDamage* powerMuliply).ToString() + " damage.";
+                AddEnemyActionText(TowerList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + TowerList[0].Attack2.EnemyAttackName + " dealing " + (TowerList[0].Attack2.EnemyAttackDamage* powerMuliply).ToString() + " damage.");
                 Player1.PlayerCurrentHealth -= TowerList[0].Attack2.EnemyAttackDamage * powerMuliply;
 
             }
@@ -353,7 +375,7 @@ namespace TheGame
         {
             Player1.PlayerCurrentStamina += (Player1.PlayerStamina/1.5);
             Player1.PlayerCurrentMana += (Player1.PlayerMana/1.5);
-            txtActionDisplay.Text = Player1.PlayerName + " took a rest to recover their stamina and mana, leaving themselves open to attack! \n";
+            AddPlayerActionText(Player1.PlayerName + " took a rest to recover their stamina and mana, leaving themselves open to attack! \n");
 
             EnemyAttack(1.5);
             RefreshScreen();

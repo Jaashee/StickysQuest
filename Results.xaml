@@ -8,14 +8,66 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Results">
 
+    <Page.Resources>
+        <Style x:Key="ContinueButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF1E1E1E"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="Padding" Value="12,6"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF454545" TargetName="border"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#FF1E1E1E" TargetName="border"/>
+                                <Setter Property="Foreground" Value="#FFCCCCCC"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-        <Rectangle Name="PlayerRect" Height="250" Width="250" Fill="Yellow" Canvas.Left="140" Canvas.Top="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,151,0,0"/>
-        <Rectangle Name="EnemyRect" Height="250" Width="250" Fill="Yellow" Canvas.Left="527" Canvas.Top="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="514,151,0,0"/>
-        <Label x:Name="lblResult" Content="Victory" HorizontalAlignment="Center" Margin="0,67,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Background="#00000000" Foreground="#FF01A40B"/>
-        <Rectangle x:Name="RectPlayerHat" Height="250" Width="250" Fill="Yellow" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,151,0,0"/>
-        <Button x:Name="btnContinue" Content="Button" HorizontalAlignment="Left" Margin="373,401,0,0" VerticalAlignment="Top" Click="btnContinue_Click"/>
+            <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="Player" FontWeight="Bold" FontSize="24"/>
+                <Rectangle Name="PlayerRect" Height="250" Width="250" Fill="Yellow" Margin="0,10"/>
+                <Rectangle x:Name="RectPlayerHat" Height="250" Width="250" Fill="Yellow" Margin="0,-250"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="Enemy" FontWeight="Bold" FontSize="24"/>
+                <Rectangle Name="EnemyRect" Height="250" Width="250" Fill="Yellow" Margin="0,10"/>
+            </StackPanel>
+        </Grid>
+
+        <Label x:Name="lblResult" Content="Victory" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Foreground="#FF01A40B" Grid.Row="0" Background="#FF1E1E1E" Padding="20,10" Margin="0,10,0,0" Grid.RowSpan="2"/>
+
+        <Button x:Name="btnContinue" Content="Back to Main Menu" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnContinue_Click" Grid.Row="2" Style="{StaticResource ContinueButtonStyle}" Width="192" Height="44"/>
 
     </Grid>
 </Page>
