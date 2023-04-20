@@ -48,3 +48,39 @@ name: Ice Golem date: 2023-04-20 6:45:54 PM ---- Sticky dealt 15 damage to Ice G
 name: Snow Miser date: 2023-04-20 6:45:56 PM ---- Sticky dealt 25 damage to Snow Miser.
 name: Snow Miser date: 2023-04-20 6:45:56 PM ---- Snow Miser dealt 30 damage to Sticky.
 name: Snow Miser date: 2023-04-20 6:45:56 PM ---- Sticky dealt 25 damage to Snow Miser.
+name: Ice Golem date: 2023-04-20 7:06:33 PM ---- Sticky dealt 7.5 damage to Ice Golem.
+name: Ice Golem date: 2023-04-20 7:06:33 PM ---- Ice Golem dealt 15 damage to Sticky.
+name: Ice Golem date: 2023-04-20 7:06:34 PM ---- Sticky dealt 7.5 damage to Ice Golem.
+name: Snow Slime date: 2023-04-20 7:12:20 PM ---- Sticky dealt 7.5 damage to Snow Slime.
+name: Snow Slime date: 2023-04-20 7:12:20 PM ---- Snow Slime dealt 10 damage to Sticky.
+name: Snow Slime date: 2023-04-20 7:12:23 PM ---- Sticky dealt 7.5 damage to Snow Slime.
+name: Slime date: 2023-04-20 7:12:43 PM ---- Sticky dealt 3.5 damage to Slime.
+name: Slime date: 2023-04-20 7:12:43 PM ---- Sticky dealt 5 damage to Slime.
+name: Slime date: 2023-04-20 7:12:43 PM ---- Slime dealt 15 damage to Sticky.
+name: Mishapen Snowflake date: 2023-04-20 7:12:59 PM ---- Sticky dealt 7 damage to Mishapen Snowflake.
+name: Mishapen Snowflake date: 2023-04-20 7:12:59 PM ---- Sticky dealt 2.5 damage to Mishapen Snowflake.
+name: Mishapen Snowflake date: 2023-04-20 7:12:59 PM ---- Mishapen Snowflake dealt 30 damage to Sticky.
+name: Mishapen Snowflake date: 2023-04-20 7:13:00 PM ---- Sticky dealt 7 damage to Mishapen Snowflake.
+name: Mishapen Snowflake date: 2023-04-20 7:13:00 PM ---- Sticky dealt 2.5 damage to Mishapen Snowflake.
+name: Mishapen Snowflake date: 2023-04-20 7:13:00 PM ---- Mishapen Snowflake dealt 10 damage to Sticky.
+name: Mishapen Snowflake date: 2023-04-20 7:13:01 PM ---- Sticky dealt 7 damage to Mishapen Snowflake.
+name: Mishapen Snowflake date: 2023-04-20 7:13:01 PM ---- Sticky dealt 2.5 damage to Mishapen Snowflake.
+name: Snow Miser date: 2023-04-20 7:13:17 PM ---- Sticky dealt 20 damage to Snow Miser.
+name: Snow Miser date: 2023-04-20 7:13:17 PM ---- Sticky dealt 20 damage to Snow Miser.
+name: Snow Miser date: 2023-04-20 7:13:17 PM ---- Snow Miser dealt 25 damage to Sticky.
+name: Snow Miser date: 2023-04-20 7:13:28 PM ---- Snow Miser dealt 45 damage to Sticky.
+name: Polar Beast date: 2023-04-20 7:29:43 PM ---- Sticky dealt 30 damage to Polar Beast.
+name: Snow Slime date: 2023-04-20 7:29:46 PM ---- Sticky dealt 50 damage to Snow Slime.
+name: Mishapen Snowflake date: 2023-04-20 7:29:48 PM ---- Sticky dealt 15 damage to Mishapen Snowflake.
+name: Ice Golem date: 2023-04-20 7:29:50 PM ---- Sticky dealt 3.5 damage to Ice Golem.
+name: Ice Golem date: 2023-04-20 7:29:50 PM ---- Sticky dealt 2.5 damage to Ice Golem.
+name: Ice Golem date: 2023-04-20 7:29:50 PM ---- Ice Golem dealt 15 damage to Sticky.
+name: Ice Golem date: 2023-04-20 7:29:55 PM ---- Sticky dealt 3.5 damage to Ice Golem.
+name: Ice Golem date: 2023-04-20 7:29:55 PM ---- Sticky dealt 2.5 damage to Ice Golem.
+name: Ice Golem date: 2023-04-20 7:29:55 PM ---- Ice Golem dealt 10 damage to Sticky.
+name: Slimeta Clause date: 2023-04-20 7:30:00 PM ---- Sticky dealt 40 damage to Slimeta Clause.
+name: Slimeta Clause date: 2023-04-20 7:30:00 PM ---- Sticky dealt 20 damage to Slimeta Clause.
+name: Slimeta Clause date: 2023-04-20 7:30:00 PM ---- Slimeta Clause dealt 30 damage to Sticky.
+name: Slimeta Clause date: 2023-04-20 7:30:02 PM ---- Slimeta Clause dealt 15 damage to Sticky.
+name: Slimeta Clause date: 2023-04-20 7:30:03 PM ---- Sticky dealt 40 damage to Slimeta Clause.
+name: Slimeta Clause date: 2023-04-20 7:30:03 PM ---- Sticky dealt 20 damage to Slimeta Clause.

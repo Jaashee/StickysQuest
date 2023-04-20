@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\r12d1\\source\\repos\\The_Game\\TheGame.csproj": {}
   },
   "projects": {
@@ -13,29 +12,12 @@
         "projectPath": "C:\\Users\\r12d1\\source\\repos\\The_Game\\TheGame.csproj",
         "packagesPath": "C:\\Users\\r12d1\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\r12d1\\source\\repos\\The_Game\\obj\\",
-=======
-    "C:\\Users\\jasha\\Source\\Repos\\TheGame\\TheGame.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\jasha\\Source\\Repos\\TheGame\\TheGame.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\jasha\\Source\\Repos\\TheGame\\TheGame.csproj",
-        "projectName": "TheGame",
-        "projectPath": "C:\\Users\\jasha\\Source\\Repos\\TheGame\\TheGame.csproj",
-        "packagesPath": "C:\\Users\\jasha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jasha\\Source\\Repos\\TheGame\\obj\\",
->>>>>>> ea7d60dda56ec17848bfea8349a1da9776be199d
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\r12d1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\jasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> ea7d60dda56ec17848bfea8349a1da9776be199d
           "C:\\Program Files (x86)\\NuGet\\Config\\MicroFocus.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -44,13 +26,9 @@
           "net6.0-windows"
         ],
         "sources": {
-<<<<<<< HEAD
           "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
-=======
->>>>>>> ea7d60dda56ec17848bfea8349a1da9776be199d
           "C:\\Program Files (x86)\\Micro Focus\\Visual COBOL\\NuGetPackages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -93,11 +71,7 @@
               "privateAssets": "none"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
->>>>>>> ea7d60dda56ec17848bfea8349a1da9776be199d
         }
       }
     }

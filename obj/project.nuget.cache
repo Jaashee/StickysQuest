@@ -1,18 +1,17 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "UW6HMn6XtTaOsupDum59GkjGkOnQyWLKQsJw5OKxRMikWCrijFFzb0rES6WZ5OORyH2JqCMlpJZhp+h8OAYhdA==",
   "success": true,
   "projectFilePath": "C:\\Users\\r12d1\\source\\repos\\The_Game\\TheGame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\r12d1\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
-=======
-  "dgSpecHash": "Je6a2AYEIxpbpgeslMx2EVacpBkpwSqX1qZN5qie/wFIvduzdWK1csAS9qsigVkhKT0NmfcJN/0FGmOEby6MAw==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\jasha\\Source\\Repos\\TheGame\\TheGame.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\jasha\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
->>>>>>> ea7d60dda56ec17848bfea8349a1da9776be199d
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\r12d1\\source\\repos\\The_Game\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

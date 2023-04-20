@@ -50,6 +50,7 @@ namespace TheGame
                 lblResult.Content = "Defeat!";
                 lblResult.Foreground = Brushes.Red;
             }
+            txtPlayerScore.Text = Player1.PlayerScore.ToString();
             ImageBrush PlayerImage = new ImageBrush();
             PlayerImage.ImageSource = Player1.PlayerImage;
             PlayerRect.Fill = PlayerImage;
