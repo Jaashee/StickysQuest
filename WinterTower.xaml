@@ -75,7 +75,7 @@
             <Rectangle x:Name="Wand" Height="250" Width="250" Fill="Yellow" Canvas.Left="66" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="1"/>
             <Rectangle Name="Hat" Height="250" Width="250" Fill="Yellow" Canvas.Left="66" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="-4"/>
             <Rectangle Name="WinterEnemyRect" Height="250" Width="250" Fill="Yellow" Canvas.Left="612" HorizontalAlignment="Left" Canvas.Top="-4" VerticalAlignment="Top"/>
-            <Label x:Name="lblReward" Content="Enemy defeated!  Choose a reward!" Canvas.Left="370" Canvas.Top="34" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Visibility="Hidden"/>
+            <Label x:Name="lblReward" Content="Enemy defeated!  Choose a reward!" Canvas.Left="370" Canvas.Top="34" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="White" Visibility="Hidden"/>
         </Canvas>
 
         <!-- Action Area -->
