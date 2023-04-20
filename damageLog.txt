@@ -1,0 +1,41 @@
+name: Slime date: 2023-04-20 4:14:27 PM ---- dw dealt 7.5 damage to Slime.
+name: Slime date: 2023-04-20 4:14:27 PM ---- Slime dealt 10 damage to dw.
+name: Slime date: 2023-04-20 4:14:27 PM ---- dw dealt 7.5 damage to Slime.
+name: Slime date: 2023-04-20 4:14:27 PM ---- Slime dealt 15 damage to dw.
+name: Slime date: 2023-04-20 4:14:27 PM ---- dw dealt 7.5 damage to Slime.
+name: Slime date: 2023-04-20 4:14:27 PM ---- Slime dealt 15 damage to dw.
+name: Slime date: 2023-04-20 4:14:28 PM ---- dw dealt 7.5 damage to Slime.
+name: Lava Slime date: 2023-04-20 4:14:28 PM ---- dw dealt 7.5 damage to Lava Slime.
+name: Lava Slime date: 2023-04-20 4:14:28 PM ---- Lava Slime dealt 10 damage to dw.
+name: Lava Slime date: 2023-04-20 4:14:28 PM ---- dw dealt 7.5 damage to Lava Slime.
+name: Lava Slime date: 2023-04-20 4:14:28 PM ---- Lava Slime dealt 10 damage to dw.
+name: Lava Slime date: 2023-04-20 4:14:28 PM ---- dw dealt 7.5 damage to Lava Slime.
+name: Lava Slime date: 2023-04-20 4:14:28 PM ---- Lava Slime dealt 10 damage to dw.
+name: Lava Slime date: 2023-04-20 4:14:28 PM ---- dw dealt 7.5 damage to Lava Slime.
+name: Lava Slime date: 2023-04-20 4:14:28 PM ---- Lava Slime dealt 10 damage to dw.
+name: Lava Slime date: 2023-04-20 4:14:29 PM ---- dw dealt 7.5 damage to Lava Slime.
+name: Ice Golem date: 2023-04-20 4:14:29 PM ---- dw dealt 7.5 damage to Ice Golem.
+name: Ice Golem date: 2023-04-20 4:14:29 PM ---- Ice Golem dealt 15 damage to dw.
+name: Ice Golem date: 2023-04-20 4:14:30 PM ---- Ice Golem dealt 15 damage to dw.
+name: Snow Mad Man date: 2023-04-20 5:48:30 PM ---- zach dealt 15 damage to Snow Mad Man.
+name: Snow Mad Man date: 2023-04-20 5:48:30 PM ---- Snow Mad Man dealt 10 damage to zach.
+name: Ice Fisher date: 2023-04-20 5:48:31 PM ---- Ice Fisher dealt 10 damage to zach.
+name: Ice Fisher date: 2023-04-20 5:48:32 PM ---- zach dealt 15 damage to Ice Fisher.
+name: Ice Fisher date: 2023-04-20 5:48:32 PM ---- Ice Fisher dealt 15 damage to zach.
+name: Lily Slime date: 2023-04-20 5:48:33 PM ---- Lily Slime dealt 10 damage to zach.
+name: Lava Slime date: 2023-04-20 5:48:34 PM ---- zach dealt 7.5 damage to Lava Slime.
+name: Lava Slime date: 2023-04-20 5:48:34 PM ---- Lava Slime dealt 20 damage to zach.
+name: Lava Slime date: 2023-04-20 5:48:34 PM ---- Lava Slime dealt 20 damage to zach.
+name: Lava Slime date: 2023-04-20 5:48:34 PM ---- Lava Slime dealt 20 damage to zach.
+name: Lava Slime date: 2023-04-20 5:48:35 PM ---- Lava Slime dealt 15 damage to zach.
+name: Lava Slime date: 2023-04-20 5:48:36 PM ---- Lava Slime dealt 10 damage to zach.
+name: Lava Slime date: 2023-04-20 5:48:36 PM ---- zach dealt 7.5 damage to Lava Slime.
+name: Slimeta Clause date: 2023-04-20 5:48:36 PM ---- Slimeta Clause dealt 30 damage to zach.
+name: Slimeta Clause date: 2023-04-20 5:48:37 PM ---- zach dealt 7.5 damage to Slimeta Clause.
+name: Slimeta Clause date: 2023-04-20 5:48:37 PM ---- Slimeta Clause dealt 30 damage to zach.
+name: Slimeta Clause date: 2023-04-20 5:48:37 PM ---- Slimeta Clause dealt 10 damage to zach.
+name: Slimeta Clause date: 2023-04-20 5:48:37 PM ---- zach dealt 7.5 damage to Slimeta Clause.
+name: Slimeta Clause date: 2023-04-20 5:48:37 PM ---- Slimeta Clause dealt 10 damage to zach.
+name: Slimeta Clause date: 2023-04-20 5:48:38 PM ---- Slimeta Clause dealt 30 damage to zach.
+name: Lava Fisher date: 2023-04-20 5:59:59 PM ---- Zach dealt 15 damage to Lava Fisher.
+name: Lava Fisher date: 2023-04-20 5:59:59 PM ---- Lava Fisher dealt 20 damage to Zach.
