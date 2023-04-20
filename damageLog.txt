@@ -39,3 +39,12 @@ name: Slimeta Clause date: 2023-04-20 5:48:37 PM ---- Slimeta Clause dealt 10 da
 name: Slimeta Clause date: 2023-04-20 5:48:38 PM ---- Slimeta Clause dealt 30 damage to zach.
 name: Lava Fisher date: 2023-04-20 5:59:59 PM ---- Zach dealt 15 damage to Lava Fisher.
 name: Lava Fisher date: 2023-04-20 5:59:59 PM ---- Lava Fisher dealt 20 damage to Zach.
+name: Snow Slime date: 2023-04-20 6:45:50 PM ---- Sticky dealt 7.5 damage to Snow Slime.
+name: Snow Slime date: 2023-04-20 6:45:50 PM ---- Snow Slime dealt 10 damage to Sticky.
+name: Snow Slime date: 2023-04-20 6:45:50 PM ---- Sticky dealt 7.5 damage to Snow Slime.
+name: Snow Mad Man date: 2023-04-20 6:45:51 PM ---- Sticky dealt 25 damage to Snow Mad Man.
+name: Lava Fisher date: 2023-04-20 6:45:53 PM ---- Sticky dealt 10 damage to Lava Fisher.
+name: Ice Golem date: 2023-04-20 6:45:54 PM ---- Sticky dealt 15 damage to Ice Golem.
+name: Snow Miser date: 2023-04-20 6:45:56 PM ---- Sticky dealt 25 damage to Snow Miser.
+name: Snow Miser date: 2023-04-20 6:45:56 PM ---- Snow Miser dealt 30 damage to Sticky.
+name: Snow Miser date: 2023-04-20 6:45:56 PM ---- Sticky dealt 25 damage to Snow Miser.

@@ -255,6 +255,8 @@ namespace TheGame
                 lblPlayerSP.Content = "SP: " + Player1.PlayerCurrentStamina.ToString();
                 TowerList[0].EnemyHealth -= playerDamageP;
                 lblEnemyHP.Content = "HP: " + TowerList[0].EnemyHealth.ToString();
+
+                WriteDamageToFile(Player1.PlayerName, TowerList[0].EnemyName, playerDamageP);
             }
             else
             {
@@ -264,6 +266,10 @@ namespace TheGame
                 lblPlayerSP.Content = "SP: " + Player1.PlayerCurrentStamina.ToString();
                 TowerList[0].EnemyHealth -= playerDamageP;
                 lblEnemyHP.Content = "HP: " + TowerList[0].EnemyHealth.ToString();
+
+                WriteDamageToFile(Player1.PlayerName, TowerList[0].EnemyName, playerDamageP);
+                WriteDamageToFile(Player1.PlayerName, TowerList[0].EnemyName, playerDamageS);
+
             }
 
 
@@ -301,13 +307,13 @@ namespace TheGame
             if (rand_num == 1){
                 AddEnemyActionText(TowerList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + TowerList[0].Attack1.EnemyAttackName + " dealing " + (TowerList[0].Attack1.EnemyAttackDamage * powerMuliply).ToString() + " damage. \n");
                 Player1.PlayerCurrentHealth -= TowerList[0].Attack1.EnemyAttackDamage * powerMuliply;
-
+                WriteDamageToFile(TowerList[0].EnemyName, Player1.PlayerName, TowerList[0].Attack1.EnemyAttackDamage * powerMuliply);
             }
             else
             {
                 AddEnemyActionText(TowerList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + TowerList[0].Attack2.EnemyAttackName + " dealing " + (TowerList[0].Attack2.EnemyAttackDamage* powerMuliply).ToString() + " damage. \n");
                 Player1.PlayerCurrentHealth -= TowerList[0].Attack2.EnemyAttackDamage * powerMuliply;
-
+                WriteDamageToFile(TowerList[0].EnemyName, Player1.PlayerName, TowerList[0].Attack2.EnemyAttackDamage * powerMuliply);
             }
 
 
