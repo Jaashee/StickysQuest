@@ -8,29 +8,43 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CreateCharacter">
 
-    <Grid>
-        <Button Content="Continue" HorizontalAlignment="Left" Margin="349,374,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Rectangle Name="PlayerRect" Height="250" Width="250" Fill="Yellow" Canvas.Left="140" Canvas.Top="100" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+    <Grid Background="#F0F0F0">
+        <Grid.Resources>
+            <Style x:Key="RoundedButton" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <Button Content="Continue" HorizontalAlignment="Right" Margin="0,0,50,50" VerticalAlignment="Bottom" Click="Button_Click" Padding="20,10" FontSize="16" FontWeight="Bold" Background="#1E88E5" Foreground="White" BorderThickness="0" Style="{StaticResource RoundedButton}"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="50,0,0,50" VerticalAlignment="Bottom" Click="Button_Back_Click" Padding="20,10" FontSize="16" FontWeight="Bold" Background="#1E88E5" Foreground="White" BorderThickness="0" Style="{StaticResource RoundedButton}"/>
+        <Rectangle Name="PlayerRect" Height="250" Width="250" Fill="Yellow" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top" RadiusX="10" RadiusY="10"/>
 
-        <Rectangle x:Name="Hat" Height="250" Width="250" Fill="Yellow" Canvas.Left="140" Canvas.Top="100" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <ComboBox x:Name="cmboColour" HorizontalAlignment="Left" Margin="400,100,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" SelectionChanged="cmboColour_SelectionChanged">
-            <ComboBoxItem Content="Black"/>
-            <ComboBoxItem Content="Red"/>
-            <ComboBoxItem Content="Pink"/>
-            <ComboBoxItem Content="Green"/>
-            <ComboBoxItem Content="Blue"/>
-
-        </ComboBox>
-        <ComboBox x:Name="cmboHat" HorizontalAlignment="Left" Margin="549,100,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" SelectionChanged="cmboHat_SelectionChanged">
-            <ComboBoxItem Content="None"/>
-            <ComboBoxItem Content="Top Hat"/>
-            <ComboBoxItem Content="Cat Ears"/>
-            <ComboBoxItem Content="Space Helmet"/>
-        </ComboBox>
-        <Label Content="Player Colour" HorizontalAlignment="Left" Margin="400,74,0,0" VerticalAlignment="Top"/>
-        <Label Content="Player Hat" HorizontalAlignment="Left" Margin="549,74,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtPlayerName" HorizontalAlignment="Left" Margin="474,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Player Name" HorizontalAlignment="Left" Margin="474,25,0,0" VerticalAlignment="Top"/>
-
+        <Rectangle x:Name="Hat" Height="250" Width="250" Fill="Yellow" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top" RadiusX="10" RadiusY="10"/>
+        <StackPanel Margin="350,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="350" Height="309">
+            <Label Content="         Player Name" FontSize="14" FontWeight="Bold" Width="180" HorizontalAlignment="Center" Height="46" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtPlayerName" TextWrapping="Wrap" Width="180" Padding="5" FontSize="14" HorizontalAlignment="Center" Height="49" VerticalAlignment="Center"/>
+            <Label Content="         Player Colour" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Height="46" Width="176"/>
+            <ComboBox x:Name="cmboColour" Width="180" SelectedIndex="0" SelectionChanged="cmboColour_SelectionChanged" Padding="5" FontSize="14" HorizontalAlignment="Center" Height="47">
+                <ComboBoxItem Content="Black"/>
+                <ComboBoxItem Content="Red"/>
+                <ComboBoxItem Content="Pink"/>
+                <ComboBoxItem Content="Green"/>
+                <ComboBoxItem Content="Blue"/>
+            </ComboBox>
+            <Label Content="           Player Hat" FontSize="14" FontWeight="Bold" Height="46" Width="180"/>
+            <ComboBox x:Name="cmboHat" Width="180" SelectedIndex="0" SelectionChanged="cmboHat_SelectionChanged" Padding="5" FontSize="14" Height="46">
+                <ComboBoxItem Content="None"/>
+                <ComboBoxItem Content="Top Hat"/>
+                <ComboBoxItem Content="Cat Ears"/>
+                <ComboBoxItem Content="Space Helmet"/>
+            </ComboBox>
+        </StackPanel>
     </Grid>
 </Page>

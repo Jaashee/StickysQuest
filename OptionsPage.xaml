@@ -8,10 +8,31 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="OptionsPage">
 
-    <Grid>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Right"  Margin="0,0,27,96" VerticalAlignment="Bottom" Height="41" Width="279" Click="btnBack_Click"/>
-        <Button x:Name="btnQuit" Content="Quit" HorizontalAlignment="Left" Margin="23,0,0,96" VerticalAlignment="Bottom" Height="41" Width="279" Click="btnQuit_Click"/>
-
-
+    <Grid Background="#F0F0F0">
+        <Grid.Resources>
+            <Style x:Key="RoundedButton" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Padding" Value="20,10" />
+                <Setter Property="Background" Value="#1E88E5" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="BorderThickness" Value="0" />
+            </Style>
+        </Grid.Resources>
+        <TextBlock Text="Options" FontSize="48" FontWeight="Bold" Foreground="#1E88E5" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" />
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- Add any option controls here -->
+        </StackPanel>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="20,0,0,20" VerticalAlignment="Bottom" Click="btnBack_Click" Style="{StaticResource RoundedButton}" />
+        <Button x:Name="btnQuit" Content="Quit" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" Click="btnQuit_Click" Style="{StaticResource RoundedButton}" />
     </Grid>
 </Page>

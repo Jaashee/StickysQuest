@@ -8,12 +8,31 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TitleScreen" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
 
-
-    <Grid VerticalAlignment="Center" Height="430" Margin="10,0,10,0">
-        <Button x:Name="btnStart" Content="Begin" HorizontalAlignment="Center" VerticalAlignment="Top" Height="33" Width="184" Margin="0,233,0,0" Click="btnStart_Click"/>
-        <Button x:Name="btnOptions" Content="Options" HorizontalAlignment="Center" VerticalAlignment="Top" Height="33" Width="184" Margin="0,290,0,0" Click="btnOptions_Click"/>
-        <Button x:Name="btnQuit" Content="Quit" HorizontalAlignment="Center" VerticalAlignment="Top" Height="33" Width="184" Margin="0,347,0,0" Click="btnQuit_Click"/>
-
+    <Grid>
+        <Grid.Resources>
+            <Style x:Key="RoundedButton" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Padding" Value="20,10" />
+                <Setter Property="Background" Value="#1E88E5" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="BorderThickness" Value="0" />
+            </Style>
+        </Grid.Resources>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="The Game" FontSize="48" FontWeight="Bold" Foreground="#1E88E5" TextAlignment="Center" />
+            <Button x:Name="btnStart" Content="Begin" Width="200" Click="btnStart_Click" Style="{StaticResource RoundedButton}" Margin="0,20,0,10" />
+            <Button x:Name="btnOptions" Content="Options" Width="200" Click="btnOptions_Click" Style="{StaticResource RoundedButton}" Margin="0,10,0,10" />
+            <Button x:Name="btnQuit" Content="Quit" Width="200" Click="btnQuit_Click" Style="{StaticResource RoundedButton}" Margin="0,10,0,20" />
+        </StackPanel>
     </Grid>
-
 </Page>
