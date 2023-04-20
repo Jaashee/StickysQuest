@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -66,6 +67,9 @@ namespace TheGame
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to the next page
+            SoundPlayer BackgroundMs = new SoundPlayer("Sounds/Background.wav");
+            BackgroundMs.Load();
+            BackgroundMs.Play();
             this.NavigationService.Navigate(new CreateCharacter());
         }
 
