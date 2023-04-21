@@ -1,0 +1,38 @@
+Veronica attacked Snow Mad Man with Dagger dealing 15 Stab damage.
+
+Snow Mad Man attacked Veronica with Polar Storm dealing 30 damage. 
+
+Veronica attacked Snow Mad Man with Dagger dealing 15 Stab damage.
+
+Veronica defeated Snow Mad Man earning 17.5 score points!
+
+Veronica chose a new wand and got Bone Wand
+
+Veronica attacked Lava Slime with Bone Wand dealing 25 Death damage.
+
+Veronica defeated Lava Slime earning 12.5 score points!
+
+Veronica chose a new potion and got Cyan Potion
+
+Veronica's Cyan Potion restored 50 stamina of mana
+
+Slime attacked Veronica with Tackle dealing 15 damage. 
+
+Veronica attacked Slime with Bone Wand dealing 25 Death damage.
+
+Veronica defeated Slime earning 7.5 score points!
+
+Veronica chose a new wand and got Evil Eye Scepter
+
+Veronica attacked Polar Beast with Evil Eye Scepter dealing 50 Fire damage.
+
+Veronica defeated Polar Beast earning 7.5 score points!
+
+Veronica attacked Slimeta Clause with Evil Eye Scepter dealing 50 Fire damage.
+
+Slimeta Clause attacked Veronica with Slime Slam dealing 30 damage. 
+
+Veronica attacked Slimeta Clause with Evil Eye Scepter dealing 50 Fire damage.
+
+Veronica defeated Slimeta Clause earning 55 score points!
+

@@ -170,7 +170,7 @@ namespace TheGame
         public void AddPlayerActionText(string text)
         {
 
-
+            WriteStagePlayToFile(text);
             var run = new Run(text) { Foreground = Brushes.Green };
             txtActionDisplayParagraph.Inlines.Add(run);
             txtActionDisplayParagraph.Inlines.Add(new LineBreak());
@@ -180,21 +180,24 @@ namespace TheGame
 
         public void AddEnemyActionText(string text)
         {
+                        WriteStagePlayToFile(text);
             var run = new Run(text) { Foreground = Brushes.Red };
             txtActionDisplayParagraph.Inlines.Add(run);
             txtActionDisplayParagraph.Inlines.Add(new LineBreak());
             txtActionDisplay.ScrollToEnd();
         }
 
-        private void WriteDamageToFile(string attacker, string defender, double damage)
+        private void WriteStagePlayToFile(string message)
         {
             // Define file path
-            string filePath = "../../../damageLog.txt";
+
+            string filePath = "StagePlays/" + Player1.PlayerName + "StagePlay.txt";
+
 
             // Create or append to file with damage log
             using (StreamWriter writer = new StreamWriter(filePath, true))
             {
-                writer.WriteLine($"name: {TowerList[0].EnemyName} date: {DateTime.Now} ---- {attacker} dealt {damage} damage to {defender}.");
+                writer.WriteLine(message);
             }
         }
 
@@ -256,7 +259,7 @@ namespace TheGame
                 TowerList[0].EnemyHealth -= playerDamageP;
                 lblEnemyHP.Content = "HP: " + TowerList[0].EnemyHealth.ToString();
 
-                WriteDamageToFile(Player1.PlayerName, TowerList[0].EnemyName, playerDamageP);
+
             }
             else
             {
@@ -267,8 +270,7 @@ namespace TheGame
                 TowerList[0].EnemyHealth -= playerDamageP;
                 lblEnemyHP.Content = "HP: " + TowerList[0].EnemyHealth.ToString();
 
-                WriteDamageToFile(Player1.PlayerName, TowerList[0].EnemyName, playerDamageP);
-                WriteDamageToFile(Player1.PlayerName, TowerList[0].EnemyName, playerDamageS);
+
 
             }
 
@@ -307,13 +309,12 @@ namespace TheGame
             if (rand_num == 1){
                 AddEnemyActionText(TowerList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + TowerList[0].Attack1.EnemyAttackName + " dealing " + (TowerList[0].Attack1.EnemyAttackDamage * powerMuliply).ToString() + " damage. \n");
                 Player1.PlayerCurrentHealth -= TowerList[0].Attack1.EnemyAttackDamage * powerMuliply;
-                WriteDamageToFile(TowerList[0].EnemyName, Player1.PlayerName, TowerList[0].Attack1.EnemyAttackDamage * powerMuliply);
+
             }
             else
             {
                 AddEnemyActionText(TowerList[0].EnemyName + " attacked " + Player1.PlayerName + " with " + TowerList[0].Attack2.EnemyAttackName + " dealing " + (TowerList[0].Attack2.EnemyAttackDamage* powerMuliply).ToString() + " damage. \n");
                 Player1.PlayerCurrentHealth -= TowerList[0].Attack2.EnemyAttackDamage * powerMuliply;
-                WriteDamageToFile(TowerList[0].EnemyName, Player1.PlayerName, TowerList[0].Attack2.EnemyAttackDamage * powerMuliply);
             }
 
 

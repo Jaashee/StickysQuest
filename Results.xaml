@@ -60,15 +60,18 @@
             </StackPanel>
             <Rectangle x:Name="PlayerRect" Height="250" Width="250" Fill="Yellow"/>
             <Rectangle x:Name="RectPlayerHat" Height="250" Width="250" Fill="Yellow"/>
-            <Label Content="Score:" FontWeight="Bold" FontSize="24" Grid.ColumnSpan="2" Margin="356,95,359,263"/>
-
+          
 
 
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Label Content="Enemy" FontWeight="Bold" FontSize="24"/>
                 <Rectangle x:Name="EnemyRect" Height="250" Width="250" Fill="Yellow"/>
             </StackPanel>
-            <TextBox x:Name="txtPlayerScore" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="340,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Score:" FontWeight="Bold" FontSize="24" Margin="356,78,360,257" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="txtPlayerScore" HorizontalAlignment="Left" Margin="340,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+            <Button x:Name="btnScore" Content="View Scoreboard" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnScore_Click" Style="{StaticResource ContinueButtonStyle}" Width="192" Height="44" Grid.ColumnSpan="2" Margin="302,299,0,0"/>
+            <Button x:Name="btnStagePlay" Content="View Stageplay" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnSP_Click" Style="{StaticResource ContinueButtonStyle}" Width="192" Height="44" Grid.ColumnSpan="2" Margin="304,349,0,0"/>
+
         </Grid>
 
         <Label x:Name="lblResult" Content="Victory" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Foreground="#FF01A40B" Grid.Row="0" Background="#FF1E1E1E" Padding="20,10" Margin="0,10,0,0" Grid.RowSpan="2"/>

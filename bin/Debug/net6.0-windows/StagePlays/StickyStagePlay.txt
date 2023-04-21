@@ -1,0 +1,76 @@
+Sticky attacked Ice Golem with Dagger dealing 7.5 Stab damage.
+
+Ice Golem attacked Sticky with Tackle dealing 15 damage. 
+
+Sticky attacked Ice Golem with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Ice Golem earning 6.25 score points!
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Lava Slime attacked Sticky with Lava Burst dealing 20 damage. 
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Lava Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Lava Slime earning 12.5 score points!
+
+Sticky attacked Ice Fisher with Dagger dealing 15 Stab damage.
+
+Sticky defeated Ice Fisher earning 3.75 score points!
+
+Sticky attacked Snow Slime with Dagger dealing 7.5 Stab damage.
+
+Snow Slime attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Snow Slime with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Snow Slime earning 12.5 score points!
+
+Sticky attacked Snow Miser with MagicWand dealing 12.5 Holy damage.
+
+Snow Miser attacked Sticky with Polar Storm dealing 30 damage. 
+
+Sticky attacked Snow Miser with MagicWand dealing 12.5 Holy damage.
+
+Snow Miser attacked Sticky with Winter Dance dealing 25 damage. 
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Lava Slime attacked Sticky with Lava Burst dealing 20 damage. 
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Lava Slime attacked Sticky with Lava Burst dealing 20 damage. 
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Lava Slime earning 12.5 score points!
+
+Sticky chose a new wand and got Magic Wand
+
+Sticky attacked Mishapen Snowflake with Magic Wand dealing 25 Holy damage.
+
+Sticky defeated Mishapen Snowflake earning 20 score points!
+
+Sticky chose a new wand and got Bone Wand
+
+Sticky attacked Lily Slime with Bone Wand dealing 25 Death damage.
+
+Sticky defeated Lily Slime earning 17.5 score points!
+
+Sticky attacked Ice Golem with Bone Wand dealing 25 Death damage.
+
+Sticky defeated Ice Golem earning 6.25 score points!
+
+Sticky attacked Snow Miser with Bone Wand dealing 25 Death damage.
+
+Snow Miser attacked Sticky with Polar Storm dealing 30 damage. 
+
+Sticky took a rest to recover their stamina and mana, leaving themselves open to attack! 
+
+Snow Miser attacked Sticky with Polar Storm dealing 45 damage. 
+

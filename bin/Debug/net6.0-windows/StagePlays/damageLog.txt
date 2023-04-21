@@ -1,0 +1,47 @@
+Sticky attacked Mishapen Snowflake with Dagger dealing 15 Stab damage.
+
+Sticky defeated Mishapen Snowflake earning 20 score points!
+
+Sticky chose a new weapon and got Short Sword
+
+Sticky attacked Snow Mad Man with Short Sword dealing 15 Slash damage.
+
+Snow Mad Man attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Snow Mad Man with Short Sword dealing 15 Slash damage.
+
+Sticky defeated Snow Mad Man earning 17.5 score points!
+
+Sticky chose a new weapon and got Volcano Axe
+
+Sticky attacked Snow Slime with Volcano Axe dealing 40 Slash damage.
+and 20 Fire damage.
+
+Sticky defeated Snow Slime earning 12.5 score points!
+
+Sticky chose a new weapon and got Short Sword
+
+Sticky attacked Lava Fisher with Short Sword dealing 15 Slash damage.
+
+Sticky defeated Lava Fisher earning 6.25 score points!
+
+Sticky attacked Slimeta Clause with Short Sword dealing 30 Slash damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Slimeta Clause with Short Sword dealing 30 Slash damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky took a rest to recover their stamina and mana, leaving themselves open to attack! 
+
+Slimeta Clause attacked Sticky with Slime Slam dealing 45 damage. 
+
+Sticky attacked Slimeta Clause with MagicWand dealing 12.5 Holy damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Slimeta Clause with MagicWand dealing 12.5 Holy damage.
+
+Sticky defeated Slimeta Clause earning 55 score points!
+
