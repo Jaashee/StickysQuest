@@ -25,9 +25,6 @@ namespace TheGame
         public OptionsPage()
         {
             InitializeComponent();
-            BackgroundMs = new MediaPlayer();
-            BackgroundMs.Open(new Uri("Sounds/Background.wav", UriKind.Relative));
-            BackgroundMs.Play();
 
             // Set the initial volume percentage
             volumePercentage.Text = $"{(int)(volumeSlider.Value * 100)}%";

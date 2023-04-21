@@ -80,3 +80,111 @@ Sticky defeated Ice Golem earning 6.25 score points!
 
 Sticky chose a new weapon and got Volcano Axe
 
+Sticky attacked Snow Mad Man with MagicWand dealing 50 Holy damage.
+
+Sticky defeated Snow Mad Man earning 17.5 score points!
+
+Sticky attacked Snow Mad Man with MagicWand dealing 50 Holy damage.
+
+Sticky defeated Snow Mad Man earning 17.5 score points!
+
+Sticky chose a new wand and got Evil Eye Scepter
+
+Sticky attacked Polar Beast with MagicWand dealing 25 Holy damage.
+
+Sticky defeated Polar Beast earning 7.5 score points!
+
+Sticky attacked Snow Mad Man with MagicWand dealing 50 Holy damage.
+
+Sticky defeated Snow Mad Man earning 17.5 score points!
+
+Sticky attacked Ice Fisher with MagicWand dealing 25 Holy damage.
+
+Sticky defeated Ice Fisher earning 3.75 score points!
+
+Sticky chose a new weapon and got Short Sword
+
+Sticky attacked Polar Beast with MagicWand dealing 25 Holy damage.
+
+Sticky defeated Polar Beast earning 7.5 score points!
+
+Sticky's Red Potion restored 50 health
+
+Ice Fisher attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Ice Fisher attacked Sticky with Gone Fishing dealing 15 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Ice Fisher attacked Sticky with Gone Fishing dealing 15 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Ice Fisher attacked Sticky with Gone Fishing dealing 15 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Ice Golem attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Ice Golem attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Ice Golem attacked Sticky with Tackle dealing 15 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Ice Golem attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Ice Golem attacked Sticky with Tackle dealing 15 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Mishapen Snowflake attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Mishapen Snowflake attacked Sticky with Polar Storm dealing 30 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Mishapen Snowflake attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Lava Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Lava Slime attacked Sticky with Lava Burst dealing 20 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Lava Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Lava Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked Lava Slime with MagicWand dealing 25 Holy damage.
+
+Sticky defeated Lava Slime earning 12.5 score points!
+
+Sticky chose a new weapon and got Battle Axe
+
+Sticky's Red Potion restored 50 health
+
+Lava Fisher attacked Sticky with Lava Burst dealing 20 damage. 
+
+Sticky attacked Lava Fisher with Dagger dealing 15 Stab damage.
+
+Sticky defeated Lava Fisher earning 6.25 score points!
+
+Sticky chose a new weapon and got Dagger
+

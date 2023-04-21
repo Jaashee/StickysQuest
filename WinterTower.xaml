@@ -4,13 +4,13 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TheGame"
-      mc:Ignorable="d" 
-      d:DesignHeight="450"
-      Title="WinterTower" WindowHeight="450" WindowWidth="910" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+      mc:Ignorable="d"
+      Title="WinterTower" WindowHeight="450" WindowWidth="1000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="Page_Loaded" Unloaded="Page_Unloaded" Height="489" Width="1001">
+
     <Page.Resources>
         <Style x:Key="DynamicButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="#FFF9F9F9"/>
-            <Setter Property="Foreground" Value="#FF060000"/>
+            <Setter Property="Background" Value="#FF333333"/>
+            <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="BorderThickness" Value="2"/>
@@ -24,7 +24,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="LightBlue" TargetName="border"/>
+                                <Setter Property="Background" Value="#FFFF3333" TargetName="border"/>
                                 <Setter Property="Foreground" Value="Black"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
@@ -40,53 +40,58 @@
 
     <Grid Width="1000">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="315.72"/>
+            <RowDefinition Height="165"/>
+            <RowDefinition Height="21"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="174*"/>
+            <ColumnDefinition Width="333*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="193*"/>
         </Grid.ColumnDefinitions>
 
         <!-- Player Area -->
-        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical">
-            <Label x:Name="lblPlayerName" Content="" FontSize="16" FontWeight="Bold" FontFamily="Arial" Foreground="White"/>
-            <Label x:Name="lblPlayerHP" Content="" FontSize="16" FontFamily="Arial" Foreground="White"/>
-            <Label x:Name="lblPlayerSP" Content="" FontSize="16" FontFamily="Arial" Foreground="White"/>
-            <Label x:Name="lblPlayerMP" Content="" FontSize="16" FontFamily="Arial" Foreground="White"/>
-        </StackPanel>
+        <Border Grid.Row="0" Grid.Column="0" Background="#4C333333" BorderThickness="2" BorderBrush="White" CornerRadius="5" Margin="10,0,10,198" Grid.RowSpan="2">
+            <StackPanel Orientation="Vertical" Margin="8,0,8,0">
+                <Label x:Name="lblPlayerName" Content="" FontSize="16" FontWeight="Bold" FontFamily="Arial" Foreground="White"/>
+                <Label x:Name="lblPlayerHP" Content="" FontSize="16" FontFamily="Arial" Foreground="White"/>
+                <Label x:Name="lblPlayerSP" Content="" FontSize="16" FontFamily="Arial" Foreground="White"/>
+                <Label x:Name="lblPlayerMP" Content="" FontSize="16" FontFamily="Arial" Foreground="White"/>
+            </StackPanel>
+        </Border>
 
         <!-- Score Area -->
-        <Label Name="lblScore" Content="Score =" Grid.Row="0" Grid.Column="1" FontSize="20" FontWeight="Bold" FontFamily="Arial" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Border Grid.Row="0" Grid.Column="2" Background="#4C333333" BorderThickness="2" BorderBrush="White" CornerRadius="5" Margin="10,10,10,233" Grid.RowSpan="2" >
+            <Label Name="lblScore" Content="Score =" FontSize="14" FontWeight="Bold" FontFamily="Arial" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="4"/>
+        </Border>
 
         <!-- Enemy Area -->
-        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Right">
-            <Label x:Name="lblEnemyRole" Content="" FontSize="16" FontWeight="Bold" FontFamily="Arial" Foreground="White"/>
-            <Label x:Name="lblEnemyName" Content="" FontSize="16" FontFamily="Arial" Foreground="White"/>
-            <Label x:Name="lblEnemyHP" Content="" FontSize="16" FontFamily="Arial" Foreground="White"/>
-        </StackPanel>
+        <Border Grid.Row="0" Grid.Column="4" Background="#49333333" BorderThickness="2" BorderBrush="White" CornerRadius="5" Margin="10,7,27,188" Grid.RowSpan="2">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,2,0,-2" Width="136">
+                <Label x:Name="lblEnemyRole" Content="" FontSize="16" FontWeight="Bold" FontFamily="Arial" Foreground="White" HorizontalAlignment="Left"/>
+                <Label x:Name="lblEnemyName" Content="" FontSize="16" FontFamily="Arial" Foreground="White"/>
+                <Label x:Name="lblEnemyHP" Content="" FontSize="16" FontFamily="Arial" Foreground="White"/>
+            </StackPanel>
+        </Border>
 
         <!-- Battle Area -->
-        <Canvas Name="FightCanvas" Focusable="True" Grid.Row="1" Grid.ColumnSpan="3">
-            <Rectangle Name="PlayerRect" Height="250" Width="250" Fill="Yellow" Canvas.Left="66" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="-2"/>
-            <Rectangle x:Name="Weapon" Height="250" Width="250" Fill="Yellow" Canvas.Left="66" Canvas.Top="-2" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Rectangle x:Name="Wand" Height="250" Width="250" Fill="Yellow" Canvas.Left="66" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="1"/>
-            <Rectangle Name="Hat" Height="250" Width="250" Fill="Yellow" Canvas.Left="66" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="-4"/>
+        <Canvas Name="FightCanvas" Focusable="True" Grid.Row="1" Grid.ColumnSpan="5" Margin="0,89,0,20">
+            <Rectangle Name="PlayerRect" Height="250" Width="250" Fill="Yellow" Canvas.Left="66" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="-4"/>
+            <Rectangle x:Name="Weapon" Height="250" Width="250" Fill="Yellow" Canvas.Left="66" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Rectangle x:Name="Wand" Height="250" Width="250" Fill="Yellow" Canvas.Left="66" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Rectangle Name="Hat" Height="250" Width="250" Fill="Yellow" Canvas.Left="66" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Rectangle Name="WinterEnemyRect" Height="250" Width="250" Fill="Yellow" Canvas.Left="612" HorizontalAlignment="Left" Canvas.Top="-4" VerticalAlignment="Top"/>
             <Label x:Name="lblReward" Content="Enemy defeated!  Choose a reward!" Canvas.Left="370" Canvas.Top="34" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="White" Visibility="Hidden"/>
         </Canvas>
 
         <!-- Action Area -->
-        <WrapPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" Margin="16">
-            <Button Name="btnAttack" Content="Attack" Width="100" Height="50" Click="btnAttack_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
-            <Button x:Name="btnAttackWand" Content="Wand" Width="100" Height="50" Click="btnAttackWand_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
-            <Button x:Name="btnPotion" Content="Potion" Width="100" Height="50" Click="btnPotion_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
-            <Button x:Name="btnRest" Content="Rest" Width="100" Height="50" Click="btnRest_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
-        </WrapPanel>
+        <WrapPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="2" Margin="0,292,0,3" Width="0"/>
 
-        <WrapPanel x:Name="wrpNewEquip" Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="51,72,314,0" Grid.ColumnSpan="2" Visibility="Hidden">
+        <!-- Level-up Area -->
+        <WrapPanel x:Name="wrpNewEquip" Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Margin="51,161,42,20" Grid.ColumnSpan="2" Visibility="Hidden">
             <Button Name="btnNewWeap" Content="" Width="100" Height="50" Click="btnNewWeap_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
             <Button x:Name="btnNewWand" Content="" Width="100" Height="50" Click="btnNewWand_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
             <Button x:Name="btnNewPotion" Content="" Width="100" Height="50" Click="btnNewPotion_Click" Margin="4" Style="{StaticResource DynamicButtonStyle}"/>
@@ -94,7 +99,7 @@
         </WrapPanel>
 
         <!-- Text Area -->
-        <ScrollViewer Grid.Row="2" Grid.Column="1" VerticalScrollBarVisibility="Auto" Margin="4" MinHeight="55" MaxHeight="150" MinWidth="150" Height="150">
+        <ScrollViewer Grid.Row="2" Grid.Column="2" VerticalScrollBarVisibility="Auto" Margin="4,20,4,16" MinHeight="55" MaxHeight="150" MinWidth="150" Grid.RowSpan="2">
             <RichTextBox x:Name="txtActionDisplay" IsReadOnly="True" Background="Black" Foreground="White" FontSize="14" FontWeight="Medium" Padding="4" MinWidth="100" Height="150" Width="325" RenderTransformOrigin="0.473,0.432">
                 <FlowDocument>
                     <Paragraph x:Name="txtActionDisplayParagraph"/>
@@ -102,10 +107,13 @@
             </RichTextBox>
         </ScrollViewer>
 
+        <!-- Action Buttons -->
+        <Button Name="btnBack" Content="Back" Grid.Row="2" Grid.Column="4" Height="57" Width="107" Click="btnBack_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,67,0,0" Style="{StaticResource DynamicButtonStyle}"/>
+        <Button x:Name="btnPotion" Content="Potion" Click="btnPotion_Click" Margin="34,23,33,83" Style="{StaticResource DynamicButtonStyle}" Grid.Row="2" Grid.Column="1"/>
+        <Button x:Name="btnRest" Content="Rest" Click="btnRest_Click" Margin="34,95,33,10" Style="{StaticResource DynamicButtonStyle}" Grid.Column="1" Grid.Row="2"/>
+        <Button x:Name="btnAttack" Content="Attack" Click="btnAttack_Click" Margin="26,20,26,83" Style="{StaticResource DynamicButtonStyle}" Grid.Row="2"/>
+        <Button x:Name="btnAttackWand" Content="Wand" Click="btnAttackWand_Click" Style="{StaticResource DynamicButtonStyle}" Margin="26,95,26,10" Grid.Row="2"/>
 
-
-        <!-- Back Button -->
-        <Button Name="btnBack" Content="Quit" Grid.Row="2" Grid.Column="2" Height="36" Width="121" Click="btnBack_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,74,46,0" Style="{StaticResource DynamicButtonStyle}"/>
     </Grid>
 </Page>
 
