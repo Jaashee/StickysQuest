@@ -20,19 +20,20 @@ namespace TheGame
     /// </summary>
     public partial class MainWindow : Window
     {
+        // Define the MediaPlayer as a public static property
+        public static MediaPlayer BackgroundMs { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
-            
+            BackgroundMs = new MediaPlayer();
+            BackgroundMs.Open(new Uri("Sounds/Background.wav", UriKind.Relative));
+            BackgroundMs.Play();
         }
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             this.Loaded += MainWindow_Loaded;
             frmMasterFrame.NavigationService.Navigate(new TitleScreen());
         }
-        
-
-
-
     }
 }

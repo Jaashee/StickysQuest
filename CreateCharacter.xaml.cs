@@ -32,12 +32,11 @@ namespace TheGame
         {
             InitializeComponent();
 
-
-
-
             RefreshScreen();
 
         }
+
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -133,10 +132,6 @@ namespace TheGame
                 ImageBrush PlayerHat = new ImageBrush();
                 PlayerHat.ImageSource = Player1.PlayerHat;
                 Hat.Fill = PlayerHat;
-
-            
-
-
 
         }
 

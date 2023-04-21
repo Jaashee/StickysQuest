@@ -67,9 +67,7 @@ namespace TheGame
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to the next page
-            SoundPlayer BackgroundMs = new SoundPlayer("Sounds/Background.wav");
-            BackgroundMs.Load();
-            BackgroundMs.Play();
+
             this.NavigationService.Navigate(new CreateCharacter());
         }
 

@@ -47,18 +47,18 @@ namespace TheGame
 
         private void volumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (BackgroundMs != null)
+            if (MainWindow.BackgroundMs != null)
             {
-                BackgroundMs.Volume = e.NewValue;
+                MainWindow.BackgroundMs.Volume = e.NewValue;
             }
 
-            // Check if volumePercentage is not null before setting its text
             if (volumePercentage != null)
             {
                 int percentage = (int)(e.NewValue * 100);
                 volumePercentage.Text = $"{percentage}%";
             }
         }
+
 
         private void btnHelp_Click(object sender, RoutedEventArgs e)
         {
