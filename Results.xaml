@@ -8,75 +8,75 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Results">
 
-    <Page.Resources>
-        <Style x:Key="ContinueButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="#FF1E1E1E"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="18"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="BorderBrush" Value="White"/>
-            <Setter Property="Padding" Value="12,6"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF454545" TargetName="border"/>
-                                <Setter Property="Foreground" Value="White"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background" Value="#FF1E1E1E" TargetName="border"/>
-                                <Setter Property="Foreground" Value="#FFCCCCCC"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Page.Resources>
+    <Grid Background="#F0F0F0">
+        <Grid.Resources>
+            <Style x:Key="RoundedButton" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Padding" Value="20,10" />
+                <Setter Property="Background" Value="#FF6F6F6F" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#FFFF3333" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+
+        <TextBlock Text="Results" FontSize="60" FontWeight="Bold" Foreground="#FFFF3333" HorizontalAlignment="Center" VerticalAlignment="Top" Height="79" Width="210">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="Black" Direction="320" ShadowDepth="5" Opacity="0.8" BlurRadius="8"/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="59*"/>
+                    <ColumnDefinition Width="42*"/>
+                    <ColumnDefinition Width="59*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,26,0,0" Height="0" Width="0"/>
+                <Rectangle x:Name="PlayerRect" Fill="Yellow" Margin="28,80,27,39"/>
+                <Rectangle x:Name="RectPlayerHat" Fill="Yellow" Margin="28,80,27,39"/>
 
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
 
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="98,0,0,0" Height="0" Width="0"/>
 
-            <StackPanel Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,26,0,0">
-                <Label Content="Player" FontWeight="Bold" FontSize="24"/>
+                <Label Content="Score:" FontWeight="Bold" FontSize="24" Margin="65,70,65,259" Grid.Column="1"/>
+                <TextBox x:Name="txtPlayerScore" HorizontalAlignment="Center" Margin="0,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="29" Grid.Column="1"/>
 
+                <Label x:Name="lblResult" Content="Victory" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Foreground="#FF01A40B" Grid.Row="0" Background="#FF1E1E1E" Padding="20,10" Margin="0,184,0,0" Grid.Column="1" Height="68" Width="162"/>
+                <Label Content="Player" FontWeight="Bold" FontSize="24" Margin="107,33,107,294"/>
+                <Rectangle x:Name="EnemyRect" Fill="Yellow" Grid.Column="2" Margin="24,77,24,43"/>
+                <Label Content="Enemy" FontWeight="Bold" FontSize="24" Grid.Column="2" Margin="103,33,103,294"/>
 
+            </Grid>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20">
+                <Button x:Name="btnScore" Content="View Scoreboard" Click="btnScore_Click" Style="{StaticResource RoundedButton}" Margin="10,40,10,10" Width="200" />
+                <Button x:Name="btnStagePlay" Content="View Stageplay" Click="btnSP_Click" Style="{StaticResource RoundedButton}" Margin="10,40,10,10" Width="200" />
+                <Button x:Name="btnContinue" Content="Back to Main Menu" Click="btnContinue_Click" Style="{StaticResource RoundedButton}" Margin="10,40,10,10" Width="200" />
             </StackPanel>
-            <Rectangle x:Name="PlayerRect" Height="250" Width="250" Fill="Yellow"/>
-            <Rectangle x:Name="RectPlayerHat" Height="250" Width="250" Fill="Yellow"/>
-          
-
-
-            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Label Content="Enemy" FontWeight="Bold" FontSize="24"/>
-                <Rectangle x:Name="EnemyRect" Height="250" Width="250" Fill="Yellow"/>
-            </StackPanel>
-            <Label Content="Score:" FontWeight="Bold" FontSize="24" Margin="356,78,360,257" Grid.ColumnSpan="2"/>
-            <TextBox x:Name="txtPlayerScore" HorizontalAlignment="Left" Margin="340,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-            <Button x:Name="btnScore" Content="View Scoreboard" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnScore_Click" Style="{StaticResource ContinueButtonStyle}" Width="192" Height="44" Grid.ColumnSpan="2" Margin="302,299,0,0"/>
-            <Button x:Name="btnStagePlay" Content="View Stageplay" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnSP_Click" Style="{StaticResource ContinueButtonStyle}" Width="192" Height="44" Grid.ColumnSpan="2" Margin="304,349,0,0"/>
-
         </Grid>
-
-        <Label x:Name="lblResult" Content="Victory" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Foreground="#FF01A40B" Grid.Row="0" Background="#FF1E1E1E" Padding="20,10" Margin="0,10,0,0" Grid.RowSpan="2"/>
-
-        <Button x:Name="btnContinue" Content="Back to Main Menu" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnContinue_Click" Grid.Row="2" Style="{StaticResource ContinueButtonStyle}" Width="192" Height="44"/>
-
     </Grid>
 </Page>

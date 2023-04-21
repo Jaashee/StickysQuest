@@ -8,27 +8,36 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="OptionsPage">
 
-    <Grid Background="#F0F0F0">
+    <Grid>
         <Grid.Resources>
             <Style x:Key="RoundedButton" TargetType="Button">
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
-                            <Border Background="{TemplateBinding Background}" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" />
                             </Border>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
-                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontSize" Value="18" />
                 <Setter Property="FontWeight" Value="Bold" />
                 <Setter Property="Padding" Value="20,10" />
-                <Setter Property="Background" Value="#1E88E5" />
+                <Setter Property="Background" Value="#FF6F6F6F" />
                 <Setter Property="Foreground" Value="White" />
                 <Setter Property="BorderThickness" Value="0" />
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#FFFF3333" />
+                    </Trigger>
+                </Style.Triggers>
             </Style>
         </Grid.Resources>
-        <TextBlock Text="Options" FontSize="48" FontWeight="Bold" Foreground="#1E88E5" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" />
+        <TextBlock Text="Options" FontSize="60" FontWeight="Bold" Foreground="#FFFF3333" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="Black" Direction="320" ShadowDepth="5" Opacity="0.8" BlurRadius="8"/>
+            </TextBlock.Effect>
+        </TextBlock>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Volume" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10" />
             <Slider x:Name="volumeSlider" Minimum="0" Maximum="1" Value="1" LargeChange="0.1" SmallChange="0.01" TickFrequency="0.1" IsSnapToTickEnabled="True" Orientation="Horizontal" Width="200" Margin="0,0,0,20" ValueChanged="volumeSlider_ValueChanged"/>

@@ -188,3 +188,412 @@ Sticky defeated Lava Fisher earning 6.25 score points!
 
 Sticky chose a new weapon and got Dagger
 
+Sticky attacked Lily Slime with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Lily Slime earning 17.5 score points!
+
+Sticky chose a new weapon and got Short Sword
+
+Sticky attacked Mishapen Snowflake with Short Sword dealing 15 Slash damage.
+
+Sticky defeated Mishapen Snowflake earning 20 score points!
+
+Sticky chose a new weapon and got Short Sword
+
+Sticky attacked Lava Slime with Short Sword dealing 30 Slash damage.
+
+Sticky defeated Lava Slime earning 12.5 score points!
+
+Sticky chose a new weapon and got Battle Axe
+
+Sticky attacked Slime with Battle Axe dealing 50 Slash damage.
+
+Sticky defeated Slime earning 7.5 score points!
+
+Sticky chose a new weapon and got Battle Axe
+
+Sticky attacked The King of Slimes with Battle Axe dealing 50 Slash damage.
+
+The King of Slimes attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked The King of Slimes with Battle Axe dealing 50 Slash damage.
+
+Sticky defeated The King of Slimes earning 55 score points!
+
+Sticky chose a new weapon and got Battle Axe
+
+Sticky's Red Potion restored 50 health
+
+Ice Fisher attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Ice Fisher attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Ice Fisher attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Ice Fisher attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Ice Fisher with Dagger dealing 15 Stab damage.
+
+Sticky defeated Ice Fisher earning 3.75 score points!
+
+Sticky attacked Polar Beast with Dagger dealing 30 Stab damage.
+
+Sticky defeated Polar Beast earning 7.5 score points!
+
+Sticky attacked Mishapen Snowflake with Dagger dealing 15 Stab damage.
+
+Sticky defeated Mishapen Snowflake earning 20 score points!
+
+Sticky attacked Snow Mad Man with Dagger dealing 15 Stab damage.
+
+Snow Mad Man attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Snow Mad Man with Dagger dealing 15 Stab damage.
+
+Sticky defeated Snow Mad Man earning 17.5 score points!
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked Ice Fisher with Dagger dealing 15 Stab damage.
+
+Sticky defeated Ice Fisher earning 3.75 score points!
+
+Sticky attacked Slime with Dagger dealing 7.5 Stab damage.
+
+Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked Slime with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Slime earning 7.5 score points!
+
+Sticky attacked Mishapen Snowflake with Dagger dealing 15 Stab damage.
+
+Sticky defeated Mishapen Snowflake earning 20 score points!
+
+Sticky attacked Polar Beast with Dagger dealing 30 Stab damage.
+
+Sticky defeated Polar Beast earning 7.5 score points!
+
+Sticky attacked Slimeta Clause with MagicWand dealing 12.5 Holy damage.
+
+Slimeta Clause attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked Slimeta Clause with MagicWand dealing 12.5 Holy damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Slimeta Clause with MagicWand dealing 12.5 Holy damage.
+
+Slimeta Clause attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Ice Golem attacked Sticky with Tackle dealing 15 damage. 
+
+Sticky attacked Ice Golem with Dagger dealing 7.5 Stab damage.
+
+Ice Golem attacked Sticky with Tackle dealing 15 damage. 
+
+Sticky attacked Ice Golem with MagicWand dealing 25 Holy damage.
+
+Sticky defeated Ice Golem earning 6.25 score points!
+
+Sticky chose a new weapon and got Short Sword
+
+Sticky attacked Mishapen Snowflake with Short Sword dealing 15 Slash damage.
+
+Sticky defeated Mishapen Snowflake earning 20 score points!
+
+Sticky chose a new weapon and got Volcano Axe
+
+Sticky attacked Snow Slime with Volcano Axe dealing 40 Slash damage.
+and 20 Fire damage.
+
+Sticky defeated Snow Slime earning 12.5 score points!
+
+Sticky chose a new wand and got Evil Eye Scepter
+
+Sticky attacked Lily Slime with Evil Eye Scepter dealing 25 Fire damage.
+
+Sticky defeated Lily Slime earning 17.5 score points!
+
+Sticky chose a new weapon and got Dagger
+
+Sticky attacked The King of Slimes with Dagger dealing 5 Stab damage.
+
+The King of Slimes attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked The King of Slimes with Dagger dealing 5 Stab damage.
+
+The King of Slimes attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+The King of Slimes attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked The King of Slimes with Dagger dealing 5 Stab damage.
+
+The King of Slimes attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked The King of Slimes with Dagger dealing 5 Stab damage.
+
+The King of Slimes attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+The King of Slimes attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked The King of Slimes with Dagger dealing 5 Stab damage.
+
+The King of Slimes attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked The King of Slimes with Dagger dealing 5 Stab damage.
+
+The King of Slimes attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky took a rest to recover their stamina and mana, leaving themselves open to attack! 
+
+The King of Slimes attacked Sticky with Bounce dealing 15 damage. 
+
+Sticky's Red Potion restored 50 health
+
+The King of Slimes attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked The King of Slimes with Dagger dealing 5 Stab damage.
+
+The King of Slimes attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked The King of Slimes with Dagger dealing 5 Stab damage.
+
+The King of Slimes attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked The King of Slimes with Dagger dealing 5 Stab damage.
+
+The King of Slimes attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky's Red Potion restored 50 health
+
+The King of Slimes attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked The King of Slimes with Evil Eye Scepter dealing 25 Fire damage.
+
+The King of Slimes attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked The King of Slimes with Dagger dealing 5 Stab damage.
+
+Sticky defeated The King of Slimes earning 55 score points!
+
+Sticky chose a new weapon and got Battle Axe
+
+Sticky's Red Potion restored 50 health
+
+Lava Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Lava Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Lava Slime attacked Sticky with Lava Burst dealing 20 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Lava Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Lava Slime attacked Sticky with Lava Burst dealing 20 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Lava Slime attacked Sticky with Lava Burst dealing 20 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Lava Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked Lava Slime with MagicWand dealing 25 Holy damage.
+
+Sticky defeated Lava Slime earning 12.5 score points!
+
+Sticky attacked Ice Golem with MagicWand dealing 25 Holy damage.
+
+Sticky defeated Ice Golem earning 6.25 score points!
+
+Sticky attacked Snow Mad Man with MagicWand dealing 50 Holy damage.
+
+Sticky defeated Snow Mad Man earning 17.5 score points!
+
+Sticky attacked Lily Slime with MagicWand dealing 25 Holy damage.
+
+Sticky defeated Lily Slime earning 17.5 score points!
+
+Sticky took a rest to recover their stamina and mana, leaving themselves open to attack! 
+
+The King of Slimes attacked Sticky with Bounce dealing 15 damage. 
+
+Sticky attacked The King of Slimes with MagicWand dealing 12.5 Holy damage.
+
+The King of Slimes attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked The King of Slimes with MagicWand dealing 12.5 Holy damage.
+
+The King of Slimes attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked The King of Slimes with MagicWand dealing 12.5 Holy damage.
+
+The King of Slimes attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Lava Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Lava Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Lava Slime earning 12.5 score points!
+
+Sticky attacked Slime with Dagger dealing 7.5 Stab damage.
+
+Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked Slime with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Slime earning 7.5 score points!
+
+Sticky attacked Lily Slime with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Lily Slime earning 17.5 score points!
+
+Sticky attacked Mishapen Snowflake with Dagger dealing 15 Stab damage.
+
+Sticky defeated Mishapen Snowflake earning 20 score points!
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked Mishapen Snowflake with Dagger dealing 15 Stab damage.
+
+Sticky defeated Mishapen Snowflake earning 20 score points!
+
+Sticky attacked Snow Slime with Dagger dealing 7.5 Stab damage.
+
+Snow Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked Snow Slime with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Snow Slime earning 12.5 score points!
+
+Sticky attacked Lava Fisher with Dagger dealing 15 Stab damage.
+
+Sticky defeated Lava Fisher earning 6.25 score points!
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Lava Slime attacked Sticky with Lava Burst dealing 20 damage. 
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Lava Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked Lava Slime with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Lava Slime earning 12.5 score points!
+
+Sticky attacked The King of Slimes with Dagger dealing 7.5 Stab damage.
+
+The King of Slimes attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked The King of Slimes with Dagger dealing 7.5 Stab damage.
+
+The King of Slimes attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky's Red Potion restored 50 health
+
+Lily Slime attacked Sticky with Bounce dealing 10 damage. 
+
+Sticky attacked Lily Slime with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Lily Slime earning 17.5 score points!
+
+Sticky attacked Slime with Dagger dealing 7.5 Stab damage.
+
+Slime attacked Sticky with Tackle dealing 15 damage. 
+
+Sticky attacked Slime with Dagger dealing 7.5 Stab damage.
+
+Sticky defeated Slime earning 7.5 score points!
+
+Sticky attacked Polar Beast with Dagger dealing 30 Stab damage.
+
+Sticky defeated Polar Beast earning 7.5 score points!
+
+Sticky attacked Ice Fisher with Dagger dealing 15 Stab damage.
+
+Sticky defeated Ice Fisher earning 3.75 score points!
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Slime Slam dealing 30 damage. 
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Snow Ball dealing 10 damage. 
+
+Sticky attacked Slimeta Clause with Dagger dealing 7.5 Stab damage.
+
+Slimeta Clause attacked Sticky with Slime Slam dealing 30 damage. 
+
