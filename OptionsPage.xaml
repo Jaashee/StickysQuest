@@ -35,6 +35,8 @@
             <TextBlock x:Name="volumePercentage" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" />
         </StackPanel>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="20,0,0,20" VerticalAlignment="Bottom" Click="btnBack_Click" Style="{StaticResource RoundedButton}" />
+        <Button x:Name="btnHelp" Content="Help" HorizontalAlignment="Center" Margin="0,382,0,0" VerticalAlignment="Top" Click="btnHelp_Click" Style="{StaticResource RoundedButton}" />
+
         <Button x:Name="btnQuit" Content="Quit" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" Click="btnQuit_Click" Style="{StaticResource RoundedButton}" />
     </Grid>
 </Page>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\r12d1\source\repos\The_Game\App.xaml
-6-188338400
+7-699559317
 
-17-307484815
+18-636898797
 195-1441718528
-CreateCharacter.xaml;MainWindow.xaml;OptionsPage.xaml;Results.xaml;TitleScreen.xaml;WinterTower.xaml;
+CreateCharacter.xaml;HelpScreen.xaml;MainWindow.xaml;OptionsPage.xaml;Results.xaml;TitleScreen.xaml;WinterTower.xaml;
 
 True
 

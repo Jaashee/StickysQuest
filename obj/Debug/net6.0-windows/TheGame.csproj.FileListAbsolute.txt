@@ -238,3 +238,5 @@ C:\Users\elhza\Source\Repos\TheGame3\obj\Debug\net6.0-windows\refint\TheGame.dll
 C:\Users\elhza\Source\Repos\TheGame3\obj\Debug\net6.0-windows\TheGame.pdb
 C:\Users\elhza\Source\Repos\TheGame3\obj\Debug\net6.0-windows\TheGame.genruntimeconfig.cache
 C:\Users\elhza\Source\Repos\TheGame3\obj\Debug\net6.0-windows\ref\TheGame.dll
+C:\Users\r12d1\source\repos\The_Game\obj\Debug\net6.0-windows\HelpScreen.g.cs
+C:\Users\r12d1\source\repos\The_Game\obj\Debug\net6.0-windows\HelpScreen.baml

@@ -59,5 +59,10 @@ namespace TheGame
                 volumePercentage.Text = $"{percentage}%";
             }
         }
+
+        private void btnHelp_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new HelpScreen());
+        }
     }
 }
